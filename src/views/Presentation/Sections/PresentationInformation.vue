@@ -5,28 +5,26 @@ import RotatingCardBack from "../../../examples/cards/rotatingCards/RotatingCard
 import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.vue";
 </script>
 <template>
-  <section class="my-5 py-5">
+  <section class="py-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-4 ms-auto me-auto p-lg-4 mt-lg-0 mt-4">
           <RotatingCard>
             <RotatingCardFront
-              image="https://images.unsplash.com/photo-1569683795645-b62e50fbf103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+              image="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/7cfb79f22186cc268533023e8dd80b76/Derivates/332ef194335299044ce59aeff0d600482d22b916.jpg"
               icon="touch_app"
-              title="Feel the <br /> Material Kit"
-              description="All the Bootstrap components that you need in a development have been
-        re-design with the new look."
+              title="Cobain Thai Tea rasa baru!"
+              description="Sensasi segar yang tak terlupakan."
             />
 
             <RotatingCardBack
-              image="https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80"
-              title="Discover More"
-              description="You will save a lot of time going from prototyping to full-functional
-                code because all elements are implemented."
+              image="https://i.pinimg.com/736x/20/2d/6a/202d6aed6af25e2afec26baea4b4cff4.jpg"
+              title="Beli Sekarang Dapet Promo!!!"
+              description="Promo sampai 10%, hanya berlaku hari ini."
               :action="[
                 {
-                  route: './/sections/page-sections/hero-sections.html',
-                  label: 'Start with Headers',
+                  route: 'https://wa.me/+6285174452316?text=Your%20message%20here',
+                  label: 'Pesan via whatsapp',
                 },
               ]"
             />
