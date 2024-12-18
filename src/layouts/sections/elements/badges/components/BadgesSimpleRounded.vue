@@ -1,5 +1,5 @@
 <script setup>
-//Vue Material Kit 2 components
+//Midas Cafetaria components
 import MaterialBadge from "@/components/MaterialBadge.vue";
 </script>
 <template>

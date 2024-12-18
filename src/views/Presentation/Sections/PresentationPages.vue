@@ -23,7 +23,7 @@ import imgSigninCover from "@/assets/img/signin-cover.png";
         </div>
       </div>
     </div>
-    <div class="container mt-5">
+    <div class="container mt-0">
       <div class="row">
         <div class="col-md-8">
           <div class="row mt-4">

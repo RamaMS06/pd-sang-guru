@@ -1,5 +1,5 @@
 <script setup>
-//Vue Material Kit 2 components
+//Midas Cafetaria components
 import MaterialSwitch from "@/components/MaterialSwitch.vue";
 </script>
 <template>

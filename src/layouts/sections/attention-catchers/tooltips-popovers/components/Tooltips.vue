@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted } from "vue";
-//Vue Material Kit 2 components
+//Midas Cafetaria components
 import MaterialButton from "@/components/MaterialButton.vue";
 
 // popover

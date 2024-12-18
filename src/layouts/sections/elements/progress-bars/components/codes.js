@@ -1,5 +1,5 @@
 export const progressSimpleCode = `<script setup>
-//Vue Material Kit 2 components
+//Midas Cafetaria components
 import MaterialProgress from "@/components/MaterialProgress.vue";
 </script>
 <template>

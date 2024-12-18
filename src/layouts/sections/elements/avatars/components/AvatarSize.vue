@@ -1,5 +1,5 @@
 <script setup>
-//Vue Material Kit 2 components
+//Midas Cafetaria components
 import MaterialAvatar from "@/components/MaterialAvatar.vue";
 
 // image

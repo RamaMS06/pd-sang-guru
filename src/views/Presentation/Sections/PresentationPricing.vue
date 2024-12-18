@@ -34,7 +34,6 @@ import SimplePricingCard from "@/examples/cards/pricingCards/SimplePricingCard.v
             :price="{ currency: '$', amount: '79' }"
             :action="{
               route: '/',
-              label: 'Buy now',
               color: 'bg-gradient-dark',
             }"
             :specifications="[

@@ -23,6 +23,7 @@ import ElDropdowns from "../layouts/sections/elements/dropdowns/DropdownsView.vu
 import ElProgressBars from "../layouts/sections/elements/progress-bars/ProgressBarsView.vue";
 import ElToggles from "../layouts/sections/elements/toggles/TogglesView.vue";
 import ElTypography from "../layouts/sections/elements/typography/TypographyView.vue";
+import CheckoutPage from "../views/CheckoutPages/CheckoutPage.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -145,6 +146,11 @@ const router = createRouter({
       path: "/sections/elements/typography",
       name: "el-typography",
       component: ElTypography,
+    },
+    {
+      path: "/pages/checkout-pages/checkout",
+      name: "contactus",
+      component: CheckoutPage,
     },
   ],
 });

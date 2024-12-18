@@ -53,22 +53,19 @@ export default {
         <div class="row justify-content-center text-center my-sm-5">
           <div class="col-lg-6">
             <MaterialBadge color="success" class="mb-3"
-              >Infinite combinations</MaterialBadge
+              >Midas Cafetaria Menus</MaterialBadge
             >
-
-            <h2 class="text-dark mb-0">Huge collection of sections</h2>
-            <p class="lead">
-              We have created multiple options for you to put together and
-              customise into pixel perfect pages.
-            </p>
+            <h2 class="text-dark mb-0">Banyak Pilihan Menu Untuk Kalian</h2>
+            <p class="lead">Kalian bisa pilih menu dibawah</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="container mt-sm-5 mt-3">
+    <img class="bg-seblak" src="@/assets/img/bg-seblak.png" />
+    <div class="container mt-sm-8 mt-3">
       <div
-        v-for="({ heading, description, items }, index) in data"
-        :class="`row ${index != 0 && index != -1 ? 'pt-lg-6' : ''}`"
+        v-for="{ heading, description, items } in data"
+        :class="`row`"
         :key="heading"
       >
         <div :class="`${col1 ?? 'col-lg-3'}`">
@@ -83,18 +80,20 @@ export default {
           </div>
         </div>
         <div :class="`${col2 ?? 'col-lg-9'}`">
-          <div :class="`row ${index != 0 ? 'mt-3' : ''}`">
+          <div :class="`row `">
             <div
               class="col-md-4 mt-md-0"
-              v-for="{ image, title, subtitle, route, pro } in items"
+              v-for="{ id, image, title, subtitle, route, price, pro } in items"
               :key="title"
             >
               <ExampleCard
                 class="min-height-160 shadow-lg mt-4"
+                :id="id"
                 :image="image"
                 :title="title"
                 :subtitle="subtitle"
                 :route="route"
+                :price="price"
                 :pro="pro"
               />
             </div>
@@ -104,3 +103,18 @@ export default {
     </div>
   </section>
 </template>
+
+<style lang="scss">
+.bg-seblak {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 768px) {
+    width: 85%;
+  }
+}
+</style>

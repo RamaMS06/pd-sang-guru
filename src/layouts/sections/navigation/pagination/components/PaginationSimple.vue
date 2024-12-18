@@ -1,5 +1,5 @@
 <script setup>
-//Vue Material Kit 2 components
+//Midas Cafetaria components
 import MaterialPagination from "@/components/MaterialPagination.vue";
 import MaterialPaginationItem from "@/components/MaterialPaginationItem.vue";
 </script>
