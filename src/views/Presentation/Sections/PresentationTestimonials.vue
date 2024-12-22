@@ -1,88 +1,90 @@
-<script setup>
-import DefaultReviewCard from "@/examples/cards/reviewCards/DefaultReviewCard.vue";
-</script>
 <template>
-  <section class="py-7">
+  <section class="py-2">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 mx-auto text-center">
-          <h2 class="mb-0">Trusted by over</h2>
+          <h2 class="mb-0">Sudah di kunjungi oleh</h2>
           <h2 class="text-gradient text-success mb-3">
-            1,679,477+ web developers
+            1,270 orang pengunjung
           </h2>
-          <p class="lead">
-            Many Fortune 500 companies, startups, universities and governmental
-            institutions love Creative Tim's products.
+          <p class="lead text-title" style="font-size: 18px">
+            Midas cafetaria sudah menjadi salah satu tempat makan dan minum
+            favorit!
           </p>
         </div>
       </div>
-      <div class="row mt-6">
-        <DefaultReviewCard
-          name="Nick Willever"
-          date="1 day ago"
-          review='"This is an excellent product, the documentation is excellent and
-          helped me get things done more efficiently."'
-          :rating="5.0"
-        />
-        <DefaultReviewCard
-          class="ms-md-auto"
-          color="bg-gradient-success"
-          name="Shailesh Kushwaha"
-          date="1 week ago"
-          review='"I found solution to all my design needs from Creative Tim. I
-                  use them as a freelancer in my hobby projects for fun! And its
-                  really affordable, very humble guys !!!"'
-          :rating="5.0"
-        />
 
-        <DefaultReviewCard
-          name="Samuel Kamuli"
-          date="3 weeks ago"
-          review='"Great product. Helped me cut the time to set up a site. I
-                  used the components within instead of starting from scratch. I
-                  highly recommend for developers who want to spend more time on
-                  the backend!."'
-          :rating="5.0"
-        />
-      </div>
       <hr class="horizontal dark my-5" />
-      <div class="row">
-        <div class="col-lg-2 col-md-4 col-6 ms-auto">
-          <img
-            class="w-100 opacity-6"
-            src="@/assets/img/logos/gray-logos/logo-apple.svg"
-            alt="Logo"
-          />
+      <div class="footer-container">
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 6px;
+            color: black;
+            font-size: 14px;
+          "
+        >
+          <span class="text-title">Follow Us</span>
+          <div style="display: flex; gap: 16px">
+           <a href="https://www.facebook.com/MidasThaiTea">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/480px-Facebook_Logo_%282019%29.png"
+                height="35px"
+                alt="Logo"
+              />
+           </a>
+            <a href="https://www.instagram.com/Midasth4">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png"
+                height="35px"
+                alt="Logo"
+              />
+            </a>
+          </div>
         </div>
-        <div class="col-lg-2 col-md-4 col-6">
-          <img
-            class="w-100 opacity-6"
-            src="@/assets/img/logos/gray-logos/logo-facebook.svg"
-            alt="Logo"
-          />
-        </div>
-        <div class="col-lg-2 col-md-4 col-6">
-          <img
-            class="w-100 opacity-6"
-            src="@/assets/img/logos/gray-logos/logo-nasa.svg"
-            alt="Logo"
-          />
-        </div>
-        <div class="col-lg-2 col-md-4 col-6 ms-lg-0 ms-md-auto">
-          <img
-            class="w-100 opacity-6"
-            src="@/assets/img/logos/gray-logos/logo-vodafone.svg"
-            alt="Logo"
-          />
-        </div>
-        <div class="col-lg-2 col-md-4 col-6 me-md-auto mx-md-0 mx-auto">
-          <img
-            class="w-100 opacity-6"
-            src="@/assets/img/logos/gray-logos/logo-digitalocean.svg"
-            alt="Logo"
-          />
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 6px;
+            color: black;
+            font-size: 14px;
+          "
+        >
+          <span class="text-title">Payment with</span>
+          <div style="display: flex; gap: 16px">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/97/Logo_BRI.png"
+              height="35px"
+              alt="Logo"
+            />
+            <img
+              height="35px"
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhvTtjN1Bj37W3jTiire9jlqgP046Je6-JPvIVEMjW6avji3kH1eC5HyUDIY8q1l6z89kidy_XZz4cX7-d_rdSentSrY94naUFcRo-NhiEvMUWmevEbQz-xRdMLUFSr61dHVvbVDq58GmxM0UAIgwnfCak8KWr0wTa0UmmjdUQTTcm2pEd3YjuHtPj9Q/s2161/Logo%20QRIS.png"
+              alt="Logo"
+            />
+          </div>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<style lang="scss">
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 75px;
+  grid-gap: 10px;
+}
+
+.facebook,
+.instagram {
+  cursor: pointer;
+}
+</style>

@@ -2,8 +2,9 @@
 import { onMounted, reactive, ref } from "vue";
 import NavbarDefault from "../..//examples/navbars/NavbarDefault.vue";
 import { RouterLink } from "vue-router";
+import SelectModal from "../Presentation/Components/SelectModal.vue";
 
-let products = reactive(JSON.parse(localStorage.getItem("products")));
+let products = reactive(JSON.parse(localStorage.getItem("products"))) || [];
 
 let summaries = reactive([
   {
@@ -12,7 +13,7 @@ let summaries = reactive([
   },
   {
     label: "Ongkos Kirim",
-    value: 8000,
+    value: 0,
   },
   {
     label: "Total (ongkir dll)",
@@ -26,7 +27,32 @@ let phone = ref("");
 
 let address = ref("");
 
+let addressMidas = ref("");
+
 let isPickup = ref(false);
+
+let showModal = ref(false);
+
+const items = [
+  {
+    id: 1,
+    name: "Midas Thaitea (Rika)",
+    phone: "+6281374019998",
+    desc: "Simpang Metur, Jalan Prabumulih-Baturaja, Lubai Ulu (Samping Indomaret) LUBAI ULU, KAB.MUARA ENIM, SUMATERA SELATAN ID 31173",
+  },
+  {
+    id: 2,
+    name: "Ruko MIDAS thaitea",
+    phone: "+6281379927964",
+    desc: "MIDAS THAITEA .Jalan Putri Candi, Peninjauan Sumsel, Baturaja Timur BATURAJA TIMUR, KAB. OGAN KOMERING ULU, SUMATERA SELATAN, ID 32111",
+  },
+];
+
+const handleSelect = (item) => {
+  addressMidas.value = item.desc;
+  showModal.value = false;
+  goToWhatsapp(item.phone, item);
+};
 
 const handleCheckbox = () => {
   if (isPickup.value) {
@@ -85,6 +111,43 @@ const submitCart = () => {
   console.log(summaries[1].value);
   summaries[2].value = summaries[0].value + summaries[1].value;
   console.log(summaries[2].value);
+
+  if (isPickup.value) {
+    showModal.value = true;
+  } else {
+    goToWhatsapp();
+  }
+};
+
+const goToWhatsapp = (midasPhone = "+6285174452316", cabang) => {
+  const listMakananMinuman = products
+    .map(
+      (item, index) => `${index + 1}. *${item.title}* - *Jumlah*: ${item.quantity}`
+    )
+    .join("\n");
+
+  const pickup = isPickup.value
+    ? `Pesanan diambil pada cabang:\n` +
+      `*Nama Cabang*: ${cabang.name}\n` +
+      `*Alamat Cabang*: ${cabang.desc}\n\n`
+    : "";
+
+  const message =
+    `Halo Midas Cafe, saya ingin memesan makanan atau minuman.\n` +
+    `Berikut detail pesanan saya:\n\n` +
+    `*Nama*: ${name.value}\n` +
+    `*No. HP*: ${phone.value}\n\n` +
+    `*Pesanan*:\n` +
+    listMakananMinuman +
+    `\n\n` +
+    pickup +
+    `*Total Harga*: ${formatter.format(
+      summaries[0].value + summaries[1].value
+    )}\n\n` +
+    `Apakah tersedia? Jika ya, tolong dikonfirmasi, Terima Kasih!`;
+
+  const encodedMessage = encodeURIComponent(message);
+  window.open(`https://wa.me/${midasPhone}?text=${encodedMessage}`);
 };
 
 onMounted(() => {
@@ -108,10 +171,8 @@ onMounted(() => {
     <img class="empty-cart--img mt-8" src="@/assets/img/empty-cart.png" />
     <span class="empty-cart--label">Keranjang kamu kosongg 😭</span>
     <RouterLink to="/">
-      <span style="text-decoration: underline"
-        >Pesan seblak yuk</span
-      ></RouterLink
-    >
+      <span style="text-decoration: underline">Pesan seblak yuk</span>
+    </RouterLink>
   </div>
   <div
     class="cart container position-sticky z-index-sticky mt-8"
@@ -216,6 +277,7 @@ onMounted(() => {
               autocomplete="off"
               v-model="address"
               :disabled="isPickup"
+              v-on:change="handleCheckbox"
             />
           </div>
           <div class="input-checkbox mt-2">
@@ -231,6 +293,12 @@ onMounted(() => {
               <span class="checkbox-label">Ambil di tempat</span>
             </label>
           </div>
+          <SelectModal
+            :is-open="showModal"
+            :items="items"
+            @close="showModal = false"
+            @select="handleSelect"
+          />
           <div class="payment__cart__summary">
             <hr
               style="
@@ -345,6 +413,7 @@ onMounted(() => {
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   &--img {
     object-fit: cover;
@@ -366,12 +435,14 @@ onMounted(() => {
       gap: 4px;
 
       &--title {
+        color: black;
         font-weight: 600;
         font-size: 14px;
       }
 
       &--subtitle {
-        font-size: 12px;
+        font-size: 11px;
+        text-overflow: ellipsis;
       }
     }
   }
@@ -382,6 +453,10 @@ onMounted(() => {
     flex-direction: row;
     align-items: center;
     gap: 16px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
 
     &--price {
       font-size: 18px;
@@ -405,6 +480,10 @@ onMounted(() => {
       justify-content: center;
       align-items: center;
       margin-right: 20px;
+
+      @media (max-width: 768px) {
+        margin-right: 0px;
+      }
 
       &--quantity {
         font-size: 16px;
@@ -479,7 +558,7 @@ onMounted(() => {
   height: 60px;
   border-radius: 15px;
   border: none;
-  background-color: #03a9f4;
+  background-color: #4caf50;
   display: flex;
   justify-content: space-between;
   padding-left: 24px;
@@ -491,7 +570,7 @@ onMounted(() => {
   &:hover {
     cursor: pointer;
     transform: translateY(-2.5px);
-    box-shadow: 0 4px 6px 0 white;
+    box-shadow: 0 4px 6px 0 rgba(255, 255, 255, 0.4);
   }
 
   &--total {

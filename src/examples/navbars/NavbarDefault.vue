@@ -51,6 +51,13 @@ const getTextColor = () => {
   return color;
 };
 
+const goToSupportCenter = () => {
+  return window.open(
+    `https://wa.me/+6281374019998?text=Halo midas cafetaria, saya ingin bertanya :)`,
+    "_blank"
+  );
+};
+
 // set nav color on mobile && desktop
 
 let textDark = ref(props.darkText);
@@ -128,15 +135,26 @@ watch(
         />
         <span class="title-midas">Midas Cafetaria</span>
       </RouterLink>
-      <RouterLink class="checkout-navbar" to="/pages/checkout-pages/checkout">
-        <div
-          class="material-icons opacity-6 me-2 text-md"
-          :class="getTextColor()"
-        >
-          shopping_cart
+      <div style="display: flex; gap: 16px">
+        <div class="service-navbar" v-on:click="goToSupportCenter()">
+          <div
+            class="material-icons opacity-6 me-2 text-md"
+            :class="getTextColor()"
+          >
+            support_agent
+          </div>
+          <span class="checkout-text">Service</span>
         </div>
-        <span class="checkout-text"> Chart </span>
-      </RouterLink>
+        <RouterLink class="checkout-navbar" to="/pages/checkout-pages/checkout">
+          <div
+            class="material-icons opacity-6 me-2 text-md"
+            :class="getTextColor()"
+          >
+            shopping_cart
+          </div>
+          <span class="checkout-text"> Chart </span>
+        </RouterLink>
+      </div>
     </div>
   </nav>
   <!-- End Navbar -->
@@ -145,7 +163,11 @@ watch(
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-.checkout-navbar {
+.service-navbar {
+  cursor: pointer;
+}
+.checkout-navbar,
+.service-navbar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,13 +190,13 @@ watch(
   margin-left: 10px;
 }
 
-.checkout-text{
+.checkout-text {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 600;
 }
 
-.shadow{
+.shadow {
   box-shadow: none;
 }
 </style>

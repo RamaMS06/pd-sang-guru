@@ -53,10 +53,12 @@ export default {
         <div class="row justify-content-center text-center my-sm-5">
           <div class="col-lg-6">
             <MaterialBadge color="success" class="mb-3"
-              >Midas Cafetaria Menus</MaterialBadge
+              >Menu Midas Cafetaria</MaterialBadge
             >
             <h2 class="text-dark mb-0">Banyak Pilihan Menu Untuk Kalian</h2>
-            <p class="lead">Kalian bisa pilih menu dibawah</p>
+            <p class="lead text-title" style="font-size: 18px">
+              Kalian bisa pilih menu dibawah
+            </p>
           </div>
         </div>
       </div>
@@ -105,6 +107,13 @@ export default {
 </template>
 
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.text-secondary {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
 .bg-seblak {
   display: block;
   margin-left: auto;

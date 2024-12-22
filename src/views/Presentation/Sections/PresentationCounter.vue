@@ -24,7 +24,7 @@ import DefaultCounterCard from "../../../examples/cards/counterCards/DefaultCoun
                 color="success"
                 title="Thai Tea"
                 description="Stroberry Float, Manggo Float, Mocca Float, Yakult Melon"
-                :count="21"
+                :count="11"
                 suffix="+"
                 :duration="3000"
                 divider="vertical"
