@@ -2,7 +2,8 @@
 import { onMounted, reactive, ref } from "vue";
 import NavbarDefault from "../..//examples/navbars/NavbarDefault.vue";
 import { RouterLink } from "vue-router";
-import SelectModal from "../Presentation/Components/SelectModal.vue";
+import AddressModal from "../Presentation/Components/AddressModal.vue";
+import PaymentModal from "../Presentation/Components/PaymentModal.vue";
 
 let products = reactive(JSON.parse(localStorage.getItem("products"))) || [];
 
@@ -31,13 +32,15 @@ let addressMidas = ref("");
 
 let isPickup = ref(false);
 
-let showModal = ref(false);
+let isPay = ref(false);
 
-// let selectedFileUrl = ref(null);
+let showModalAddress = ref(false);
 
-// let selectedFile = ref(null);
+let showModalPayment = ref(false);
 
-const items = [
+let uploadedFile = ref(null);
+
+const itemsAddress = [
   {
     id: 1,
     name: "Midas Thaitea (Rika)",
@@ -52,13 +55,18 @@ const items = [
   },
 ];
 
-const handleSelect = (item) => {
+const handleSelectAddress = (item) => {
   addressMidas.value = item.desc;
-  showModal.value = false;
+  showModalAddress.value = false;
   goToWhatsapp(item.phone, item);
 };
 
-const handleCheckbox = () => {
+const handleSubmitPayment = (file) => {
+  uploadedFile.value = file ? URL.createObjectURL(file) : null;
+  goToWhatsapp();
+};
+
+const handlePickup = () => {
   if (isPickup.value) {
     address.value = "";
   }
@@ -108,32 +116,15 @@ const decreaseQuantity = (index) => {
 
 const submitCart = () => {
   if (isPickup.value) {
-    showModal.value = true;
+    showModalAddress.value = true;
+  } else if (isPay.value) {
+    showModalPayment.value = true;
   } else {
     goToWhatsapp();
   }
 };
 
-// const fileInput = ref(null);
-
-// const triggerFileInput = () => {
-//   fileInput.value.click();
-// };
-
-// const handleUpload = (event) => {
-//   const file = event.target.files[0];
-
-//   if (file) {
-//     selectedFile.value = file.name;
-//     console.log(file);
-//     selectedFileUrl.value = URL.createObjectURL(file);
-//     console.log(selectedFileUrl.value);
-//   } else {
-//     selectedFileUrl.value = null;
-//   }
-// };
-
-const goToWhatsapp = (midasPhone = "+6281374019998", cabang) => {
+const goToWhatsapp = (midasPhone = "+6285174452316", cabang) => {
   const listMakananMinuman = products
     .map(
       (item, index) =>
@@ -144,10 +135,14 @@ const goToWhatsapp = (midasPhone = "+6281374019998", cabang) => {
   const pickup = isPickup.value
     ? `Pesanan diambil pada cabang:\n` +
       `*Nama Cabang*: ${cabang.name}\n` +
-      `*Alamat Cabang*: ${cabang.desc}\n\n`
+      `*Alamat Cabang*: ${cabang.desc}\n`
     : "";
 
   const newAddress = isPickup.value ? `` : `*Alamat*: ${address.value}\n\n`;
+
+  const buktiTransfer = uploadedFile.value
+    ? `Bukti Transfer:\n` + uploadedFile.value
+    : "";
 
   const message =
     `Halo Midas Cafe, saya ingin memesan makanan atau minuman.\n` +
@@ -162,9 +157,8 @@ const goToWhatsapp = (midasPhone = "+6281374019998", cabang) => {
     `*Total Harga*: ${formatter.format(
       summaries[0].value + summaries[1].value
     )}\n\n` +
-    `Apakah tersedia? Jika ya, tolong dikonfirmasi, Terima Kasih! \n\n`;
-  // `Bukti Transfer:\n` +
-  // selectedFileUrl.value;
+    `Tolong untuk konfirmasi pesanannya, Terima Kasih! \n\n` +
+    buktiTransfer;
 
   const encodedMessage = encodeURIComponent(message);
   window.open(`https://wa.me/${midasPhone}?text=${encodedMessage}`);
@@ -293,7 +287,7 @@ onMounted(() => {
               autocomplete="off"
               v-model="address"
               :disabled="isPickup"
-              v-on:change="handleCheckbox"
+              v-on:change="handlePickup"
             />
           </div>
           <div class="input-checkbox mt-2">
@@ -303,35 +297,38 @@ onMounted(() => {
                 type="checkbox"
                 id="checkbox"
                 v-model="isPickup"
-                v-on:change="handleCheckbox"
+                v-on:change="handlePickup"
               />
               <span class="custom-checkbox"></span>
               <span class="checkbox-label">Ambil di tempat</span>
             </label>
           </div>
-          <!-- 
-          <div
-            class="upload-container"
-            :class="selectedFile ? 'success' : ''"
-            v-on:click="triggerFileInput"
-          >
-            <input
-              type="file"
-              class="file-input"
-              ref="fileInput"
-              accept="image/*"
-              @change="handleUpload"
-            />
-            <span class="upload-text">
-              {{ selectedFile ? selectedFile : "Upload Bukti Transfer" }}
-            </span>
-          </div> -->
-          <SelectModal
-            :is-open="showModal"
-            :items="items"
-            @close="showModal = false"
-            @select="handleSelect"
+
+          <div class="input-checkbox">
+            <label style="display: flex; margin-left: 0px">
+              <input
+                class="cart-checkbox"
+                type="checkbox"
+                id="checkbox-payment"
+                v-model="isPay"
+              />
+              <span class="custom-checkbox"></span>
+              <span class="checkbox-label">Bayar sekarang</span>
+            </label>
+          </div>
+
+          <AddressModal
+            :is-open="showModalAddress"
+            :items="itemsAddress"
+            @close="showModalAddress = false"
+            @select="handleSelectAddress"
           />
+          <PaymentModal
+            :is-open="showModalPayment"
+            @close="showModalPayment = false"
+            @submit="handleSubmitPayment"
+          />
+
           <div class="payment__cart__summary">
             <hr
               style="
@@ -402,14 +399,15 @@ onMounted(() => {
 
 .payment__cart {
   width: 65%;
-  height: 40rem;
   background-color: #5c6bc0;
+  height: 40rem;
   border-radius: 20px;
   padding: 34px;
   color: white;
   font-family: "Poppins", sans-serif;
   box-shadow: 0px 4px 6px #5c6bc0;
   position: relative;
+  transition: 0.3s;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -631,32 +629,6 @@ onMounted(() => {
     font-size: 24px;
     color: black;
   }
-}
-
-.upload-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: gray; /* Green color */
-  border: 2px dashed #ffffff; /* Dashed white border */
-  border-radius: 10px; /* Rounded corners */
-  color: white;
-  width: 300px; /* Fixed width */
-  height: 45px; /* Fixed height */
-  cursor: pointer;
-  width: 100%;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  text-align: center;
-  transition: background-color 0.3s ease;
-
-  &.success {
-    background-color: #45a049;
-  }
-}
-
-.upload-container:hover {
-  background-color: #45a049; /* Darker green on hover */
 }
 
 .file-input {
