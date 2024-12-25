@@ -87,7 +87,7 @@ export default [
     items: [
       {
         id: 8,
-        image: `/src/assets/img/original-thai-tea.jpeg`,
+        image: "/original-thai-tea.jpeg",
         title: "Original Thai Tea",
         price: 5000,
         subtitle: "Teh Thailand klasik, creamy, dan manis",
