@@ -133,7 +133,6 @@ watch(
           class="midas-thaitea-navbar"
           src="@/assets/img/midas-thaitea.jpeg"
         />
-        <span class="title-midas">Midas Cafetaria</span>
       </RouterLink>
       <div style="display: flex; gap: 16px">
         <div class="service-navbar" v-on:click="goToSupportCenter()">
@@ -152,7 +151,7 @@ watch(
           >
             shopping_cart
           </div>
-          <span class="checkout-text"> Chart </span>
+          <span class="checkout-text"> Cart </span>
         </RouterLink>
       </div>
     </div>

@@ -58,8 +58,6 @@ onUnmounted(() => {
     <PresentationCounter />
     <PresentationInformation />
     <PresentationExample :data="data" />
-    <!-- <PresentationPages /> -->
-    <!-- <BuiltByDevelopers /> -->
 
     <PresentationTestimonials />
   </div>

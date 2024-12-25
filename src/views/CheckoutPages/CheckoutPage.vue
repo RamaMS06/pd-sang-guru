@@ -33,6 +33,10 @@ let isPickup = ref(false);
 
 let showModal = ref(false);
 
+// let selectedFileUrl = ref(null);
+
+// let selectedFile = ref(null);
+
 const items = [
   {
     id: 1,
@@ -103,15 +107,6 @@ const decreaseQuantity = (index) => {
 };
 
 const submitCart = () => {
-  console.log(name.value);
-  console.log(phone.value);
-  console.log(address.value);
-  console.log(isPickup.value);
-  console.log(summaries[0].value);
-  console.log(summaries[1].value);
-  summaries[2].value = summaries[0].value + summaries[1].value;
-  console.log(summaries[2].value);
-
   if (isPickup.value) {
     showModal.value = true;
   } else {
@@ -119,10 +114,30 @@ const submitCart = () => {
   }
 };
 
-const goToWhatsapp = (midasPhone = "+6285174452316", cabang) => {
+// const fileInput = ref(null);
+
+// const triggerFileInput = () => {
+//   fileInput.value.click();
+// };
+
+// const handleUpload = (event) => {
+//   const file = event.target.files[0];
+
+//   if (file) {
+//     selectedFile.value = file.name;
+//     console.log(file);
+//     selectedFileUrl.value = URL.createObjectURL(file);
+//     console.log(selectedFileUrl.value);
+//   } else {
+//     selectedFileUrl.value = null;
+//   }
+// };
+
+const goToWhatsapp = (midasPhone = "+6281374019998", cabang) => {
   const listMakananMinuman = products
     .map(
-      (item, index) => `${index + 1}. *${item.title}* - *Jumlah*: ${item.quantity}`
+      (item, index) =>
+        `${index + 1}. *${item.title}* - *Jumlah*: ${item.quantity}`
     )
     .join("\n");
 
@@ -132,24 +147,28 @@ const goToWhatsapp = (midasPhone = "+6285174452316", cabang) => {
       `*Alamat Cabang*: ${cabang.desc}\n\n`
     : "";
 
+  const newAddress = isPickup.value ? `` : `*Alamat*: ${address.value}\n\n`;
+
   const message =
     `Halo Midas Cafe, saya ingin memesan makanan atau minuman.\n` +
     `Berikut detail pesanan saya:\n\n` +
     `*Nama*: ${name.value}\n` +
-    `*No. HP*: ${phone.value}\n\n` +
-    `*Pesanan*:\n` +
+    `*No. HP*: ${phone.value}\n` +
+    newAddress +
+    `\n*Pesanan*:\n` +
     listMakananMinuman +
     `\n\n` +
     pickup +
     `*Total Harga*: ${formatter.format(
       summaries[0].value + summaries[1].value
     )}\n\n` +
-    `Apakah tersedia? Jika ya, tolong dikonfirmasi, Terima Kasih!`;
+    `Apakah tersedia? Jika ya, tolong dikonfirmasi, Terima Kasih! \n\n`;
+  // `Bukti Transfer:\n` +
+  // selectedFileUrl.value;
 
   const encodedMessage = encodeURIComponent(message);
   window.open(`https://wa.me/${midasPhone}?text=${encodedMessage}`);
 };
-
 onMounted(() => {
   products.forEach((item) => {
     item.totalPrice =
@@ -174,10 +193,7 @@ onMounted(() => {
       <span style="text-decoration: underline">Pesan seblak yuk</span>
     </RouterLink>
   </div>
-  <div
-    class="cart container position-sticky z-index-sticky mt-8"
-    v-if="products.length > 0"
-  >
+  <div class="cart container position-sticky mt-8" v-if="products.length > 0">
     <div class="content__cart">
       <span class="content__cart--title">Keranjang Saya</span>
       <span class="content__cart--desc"
@@ -293,6 +309,23 @@ onMounted(() => {
               <span class="checkbox-label">Ambil di tempat</span>
             </label>
           </div>
+          <!-- 
+          <div
+            class="upload-container"
+            :class="selectedFile ? 'success' : ''"
+            v-on:click="triggerFileInput"
+          >
+            <input
+              type="file"
+              class="file-input"
+              ref="fileInput"
+              accept="image/*"
+              @change="handleUpload"
+            />
+            <span class="upload-text">
+              {{ selectedFile ? selectedFile : "Upload Bukti Transfer" }}
+            </span>
+          </div> -->
           <SelectModal
             :is-open="showModal"
             :items="items"
@@ -369,7 +402,7 @@ onMounted(() => {
 
 .payment__cart {
   width: 65%;
-  height: 38rem;
+  height: 40rem;
   background-color: #5c6bc0;
   border-radius: 20px;
   padding: 34px;
@@ -598,5 +631,40 @@ onMounted(() => {
     font-size: 24px;
     color: black;
   }
+}
+
+.upload-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray; /* Green color */
+  border: 2px dashed #ffffff; /* Dashed white border */
+  border-radius: 10px; /* Rounded corners */
+  color: white;
+  width: 300px; /* Fixed width */
+  height: 45px; /* Fixed height */
+  cursor: pointer;
+  width: 100%;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+
+  &.success {
+    background-color: #45a049;
+  }
+}
+
+.upload-container:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.file-input {
+  display: none; /* Hidden file input */
+}
+
+.upload-text {
+  font-size: 12px;
+  font-weight: bold;
 }
 </style>

@@ -57,7 +57,7 @@
           "
         >
           <span class="text-title">Payment with</span>
-          <div style="display: flex; gap: 16px">
+          <div class="payments">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/9/97/Logo_BRI.png"
               height="35px"
@@ -81,10 +81,28 @@
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 75px;
   grid-gap: 10px;
+
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
 }
 
 .facebook,
 .instagram {
   cursor: pointer;
+}
+
+.payments{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 16px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 </style>

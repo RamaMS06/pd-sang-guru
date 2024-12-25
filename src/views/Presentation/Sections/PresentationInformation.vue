@@ -5,10 +5,10 @@ import RotatingCardBack from "../../../examples/cards/rotatingCards/RotatingCard
 import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.vue";
 </script>
 <template>
-  <section class="py-5">
+  <section class="py-1">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-4 ms-auto me-auto p-lg-4 mt-lg-0 mt-4">
+        <div class="col-lg-4 ms-auto me-auto p-lg-4 mt-lg-0">
           <RotatingCard>
             <RotatingCardFront
               image="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/7cfb79f22186cc268533023e8dd80b76/Derivates/332ef194335299044ce59aeff0d600482d22b916.jpg"
