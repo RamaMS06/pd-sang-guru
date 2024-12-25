@@ -95,7 +95,7 @@ export default [
       },
       {
         id: 9,
-        image: "/src/assets/img/choco-milo-boba.jpeg",
+        image: "/choco-milo-boba.jpeg",
         title: "Choco Milo Boba",
         price: 7000,
         subtitle: "Milo cokelat lezat dengan boba kenyal",
@@ -103,7 +103,7 @@ export default [
       },
       {
         id: 10,
-        image: "/src/assets/img/durian.jpeg",
+        image: "/durian.jpeg",
         title: "Durian",
         price: 9000,
         subtitle: "Teh creamy berpadu durian harum",
@@ -111,7 +111,7 @@ export default [
       },
       {
         id: 11,
-        image: "/src/assets/img/buko-pandan.jpeg",
+        image: "/buko-pandan.jpeg",
         title: "Buko Pandan",
         price: 9000,
         subtitle: "Segar dengan aroma pandan dan kelapa",
@@ -119,7 +119,7 @@ export default [
       },
       {
         id: 12,
-        image: "/src/assets/img/green-tea.jpeg",
+        image: "/green-tea.jpeg",
         title: "Green Tea",
         price: 7000,
         subtitle: "Teh hijau creamy dengan rasa menenangkan",
@@ -127,7 +127,7 @@ export default [
       },
       {
         id: 13,
-        image: "/src/assets/img/boba-brew-sugar.jpeg",
+        image: "/boba-brew-sugar.jpeg",
         title: "Boba Brew Sugar",
         price: 7000,
         subtitle: "Teh klasik, brown sugar, dan boba kenyal",
@@ -135,7 +135,7 @@ export default [
       },
       {
         id: 14,
-        image: "/src/assets/img/taro-boba.jpeg",
+        image: "/taro-boba.jpeg",
         title: "Taro Boba",
         price: 8000,
         subtitle: "Manis lembut talas dengan boba",
@@ -143,7 +143,7 @@ export default [
       },
       {
         id: 15,
-        image: "/src/assets/img/taro.jpeg",
+        image: "/taro.jpeg",
         title: "Taro",
         price: 7000,
         subtitle: "Teh creamy dengan manis lembut talas",
@@ -151,7 +151,7 @@ export default [
       },
       {
         id: 16,
-        image: "/src/assets/img/strawberry.jpeg",
+        image: "/strawberry.jpeg",
         title: "Strawberry",
         price: 7000,
         subtitle: "Teh creamy dengan manis-asam strawberry",
@@ -159,7 +159,7 @@ export default [
       },
       {
         id: 16,
-        image: "/src/assets/img/permen-karet-viral.jpeg",
+        image: "/permen-karet-viral.jpeg",
         title: "Permen Karet Viral",
         price: 7000,
         subtitle: "Unik, manis, seperti permen karet",
@@ -167,7 +167,7 @@ export default [
       },
       {
         id: 16,
-        image: "/src/assets/img/cappucino-boba.jpeg",
+        image: "/cappucino-boba.jpeg",
         title: "Cappucino Boba",
         price: 8000,
         subtitle: "Kombinasi teh dan kopi cappuccino",
