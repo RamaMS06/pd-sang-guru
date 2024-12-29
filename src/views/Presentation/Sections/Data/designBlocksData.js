@@ -284,4 +284,43 @@ export default [
       },
     ],
   },
+  {
+    heading: "Kambing & Domba",
+    description:
+      "Kambing dan domba adalah hewan ternak yang sering dijadikan sebagai hewan kur",
+    items: [
+      {
+        id: 1,
+        image: "/kambing-jawa.jpg",
+        title: "Kambing Jawa (25kg)",
+        subtitle:
+          "Kambing Jawa adalah kambing lokal yang banyak dibudidayakan di Indonesia",
+        price: 4000000,
+      },
+      {
+        id: 2,
+        image: "https://trubus.id/wp-content/uploads/2019/06/Trubus-Edisi-Juni-2019-Highrest-16-2.jpg",
+        title: "Domba PO/Lokal (19Kg)",
+        subtitle:
+          "Domba Peranakan Ongole (PO) adalah domba lokal yang banyak dibudidayakan di Indonesia",
+        price: 2500000,
+      },
+      {
+        id: 3,
+        image: "/domba-garut.webp",
+        title: "Domba Garut (30Kg)",
+        subtitle:
+          "Domba Garut adalah domba lokal yang banyak dibudidayakan di Indonesia",
+        price: 4500000,
+      },
+      {
+        id: 4,
+        image: "/kambing-etawa.jpeg",
+        title: "Kambing Etawa (90Kg)",
+        subtitle:
+          "Kambing Etawa adalah kambing lokal yang banyak dibudidayakan di Indonesia",
+        price: 7500000,
+      },
+    ],
+  },
 ];
