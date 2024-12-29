@@ -33,19 +33,7 @@ onUnmounted(() => {
   </div>
   <Header>
     <div class="page-header min-vh-75" loading="lazy">
-      <div
-        class="bg-image"
-        :style="{
-          backgroundImage: 'url(/pemilik-sapi.jpeg)',
-          filter: 'blur(10px) brightness(40%)',
-          height: '100%',
-          width: '100%',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          zIndex: -1,
-        }"
-      ></div>
+      <div class="bg-image"></div>
       <div class="container">
         <div class="row">
           <div class="col-lg-7 text-center mx-auto position-relative">
@@ -56,8 +44,11 @@ onUnmounted(() => {
               PD. Sang Guru
             </h1>
             <p class="lead text-white px-5 mt-3"></p>
-            <p class="lead text-white px-5 mt-3" :style="{ fontWeight: '400' }">
-              MENYEDIAKAN HEWAN KURBAN BERKUALITAS , HARGA BERSAHABAT
+            <p
+              class="lead text-white mt-3 text-title"
+              :style="{ fontWeight: '400' }"
+            >
+              Menyediakan Hewan Kurban Berkualitas<br />Harga Bersahabat
             </p>
           </div>
         </div>
@@ -73,3 +64,15 @@ onUnmounted(() => {
     <PresentationTestimonials />
   </div>
 </template>
+
+<style lang="scss">
+.bg-image {
+  background-image: url("/pemilik-sapi.jpeg");
+  filter: blur(10px) brightness(40%);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+</style>
