@@ -102,7 +102,7 @@ watch(
           style="width: 20px; height: 20px"
         />
 
-        <span class="title-midas">PD. Sang Guru</span>
+        <span class="title-guru">PD. Sang Guru</span>
       </RouterLink>
       <RouterLink
         class="navbar-brand d-block d-md-none"
@@ -117,8 +117,8 @@ watch(
         data-placement="bottom"
       >
         <img
-          class="midas-thaitea-navbar"
-          src="@/assets/img/midas-thaitea.jpeg"
+          class="guru-thaitea-navbar"
+          src="https://cdn-icons-png.flaticon.com/512/2938/2938232.png"
         />
       </RouterLink>
       <div style="display: flex; gap: 16px">
@@ -164,14 +164,14 @@ watch(
   }
 }
 
-.midas-thaitea-navbar {
+.guru-thaitea-navbar {
   height: 40px;
   width: 40px;
   border-radius: 5px;
   box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
 }
 
-.title-midas {
+.title-guru {
   font-family: "Poppins", sans-serif;
   margin-left: 10px;
 }
