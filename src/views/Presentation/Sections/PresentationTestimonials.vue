@@ -168,13 +168,24 @@ const testimonies = [
         <span class="text-title" style="color: black; font-weight: 600"
           >PD. Sang Guru</span
         >
-        <div style="display: flex; justify-content: center; gap: 16px">
-          <a href="https://maps.app.goo.gl/qFrJWJvA9ashkGBP6">
-            <span style="text-align: center; display: block">
-              JL KH. Hasyim Ashari Gang Jambu, No. 38, Cipondoh, RT.006/RW.004,
-              <br />Gondrong, Kec. Tangerang, Kota Tangerang, Banten 15146
-            </span>
-          </a>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+          "
+          class=""
+        >
+          <span style="text-align: center; display: block">
+            JL KH. Hasyim Ashari Gang Jambu, No. 38, Cipondoh, RT.006/RW.004,
+            <br />Gondrong, Kec. Tangerang, Kota Tangerang, Banten 15146<br />
+            <a href="https://maps.app.goo.gl/qFrJWJvA9ashkGBP6">
+              <span style="text-decoration: underline; font-style: italic"
+                >https://maps.app.goo.gl/qFrJWJvA9ashkGBP6</span
+              >
+            </a>
+          </span>
         </div>
       </div>
       <div
@@ -190,7 +201,9 @@ const testimonies = [
       >
         <span class="text-title">Follow Us</span>
         <div style="display: flex; gap: 16px">
-          <a href="https://www.instagram.com/pdsangguru/">
+          <a
+            href="https://www.instagram.com/pdsangguruu01?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D"
+          >
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png"
               height="35px"
