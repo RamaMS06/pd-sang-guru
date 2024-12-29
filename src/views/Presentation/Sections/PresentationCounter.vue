@@ -11,10 +11,9 @@ import DefaultCounterCard from "../../../examples/cards/counterCards/DefaultCoun
             <div class="col-md-4 position-relative">
               <DefaultCounterCard
                 color="success"
-                title="Seblak"
-                description="Ceker, Sosis, Bakso, Otak-Otak Singapur, Komplit, Dumpling, & Korean Food"
-                :count="7"
-                suffix="+"
+                title="Jenis Sapi"
+                description="Po/Lokal/Ras, Simmental, Brahman, Limosin"
+                :count="4"
                 :duration="3000"
                 divider="vertical"
               />
@@ -22,9 +21,9 @@ import DefaultCounterCard from "../../../examples/cards/counterCards/DefaultCoun
             <div class="col-md-4 position-relative">
               <DefaultCounterCard
                 color="success"
-                title="Thai Tea"
-                description="Stroberry Float, Manggo Float, Mocca Float, Yakult Melon"
-                :count="11"
+                title="Jenis Kambing & Domba"
+                description="Kambing Jawa, Domba Garut, Domba PO/Lokal & Kambing Etawa"
+                :count="4"
                 suffix="+"
                 :duration="3000"
                 divider="vertical"
@@ -34,12 +33,11 @@ import DefaultCounterCard from "../../../examples/cards/counterCards/DefaultCoun
               <DefaultCounterCard
                 color="success"
                 title="Web Visitor"
-                description="Midas cafetaria sudah dijumpai lebih dari 1,270 kali! "
+                description="PD. Sang Guru sudah dijumpai lebih dari 1,270 kali! "
                 :count="1270"
                 :duration="3000"
               />
             </div>
-            
           </div>
         </div>
       </div>

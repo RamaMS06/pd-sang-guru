@@ -15,14 +15,6 @@ const triggerFileInput = () => {
   fileInput.value.click();
 };
 
-const handleUpload = (event) => {
-  const file = event.target.files[0];
-
-  if (file) {
-    uploadedFile.value = file;
-  }
-};
-
 const handleSubmit = () => {
   if (uploadedFile.value) {
     emit("submit", uploadedFile.value);

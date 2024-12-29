@@ -47,24 +47,23 @@ export default {
 };
 </script>
 <template>
-  <section class="my-5 py-5">
+  <section class="my-2 py-2">
     <div class="container">
       <div class="row">
         <div class="row justify-content-center text-center my-sm-5">
           <div class="col-lg-6">
             <MaterialBadge color="success" class="mb-3"
-              >Menu Midas Cafetaria</MaterialBadge
+              >Daftar sapi & kambing</MaterialBadge
             >
-            <h2 class="text-dark mb-0">Banyak Pilihan Menu Untuk Kalian</h2>
+            <h2 class="text-dark mb-0">Banyak Jenis Sapi & Kambing Disini</h2>
             <p class="lead text-title" style="font-size: 18px">
-              Kalian bisa pilih menu dibawah
+              Kalian bisa pilih dibawah
             </p>
           </div>
         </div>
       </div>
     </div>
-    <img class="bg-seblak" src="@/assets/img/bg-seblak.png" />
-    <div class="container mt-sm-8 mt-3">
+    <div class="container">
       <div
         v-for="{ heading, description, items } in data"
         :class="`row`"

@@ -124,7 +124,7 @@ const submitCart = () => {
   }
 };
 
-const goToWhatsapp = (midasPhone = "+6285174452316", cabang) => {
+const goToWhatsapp = (midasPhone = "+6281374019998", cabang) => {
   const listMakananMinuman = products
     .map(
       (item, index) =>
@@ -170,6 +170,8 @@ onMounted(() => {
     summaries[0].value += item.totalPrice;
   });
 });
+
+console.log(products);
 </script>
 
 <template>
@@ -182,9 +184,11 @@ onMounted(() => {
   </div>
   <div class="empty-cart" v-if="products.length === 0">
     <img class="empty-cart--img mt-8" src="@/assets/img/empty-cart.png" />
-    <span class="empty-cart--label">Keranjang kamu kosongg 😭</span>
+    <span class="empty-cart--label">Keranjang kamu kosong</span>
     <RouterLink to="/">
-      <span style="text-decoration: underline">Pesan seblak yuk</span>
+      <span style="text-decoration: underline"
+        >Pesan sapi atau kambing yuk</span
+      >
     </RouterLink>
   </div>
   <div class="cart container position-sticky mt-8" v-if="products.length > 0">
@@ -398,7 +402,7 @@ onMounted(() => {
 }
 
 .payment__cart {
-  width: 65%;
+  width: 55%;
   background-color: #5c6bc0;
   height: 40rem;
   border-radius: 20px;

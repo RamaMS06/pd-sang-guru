@@ -1,7 +1,30 @@
 <template>
-  <section class="py-2">
+  <section class="py-2 mt-8">
     <div class="container">
       <div class="row">
+        <div style="display: flex; justify-content: center; width: 100%">
+          <img
+            class="mb-5"
+            src="https://lh3.googleusercontent.com/proxy/7trqEhkqrrKpn8Im9tBIX7hnJzmUl1sL1wq9Caezi9PpiDCRBDRPRF2cbT7gm5B3bJbTtDHMUl_xkGzpl77bNRJMU3Y7QQl_Cln2yPrM0VA"
+            style="object-fit: cover; width: 45%"
+          />
+        </div>
+        <span
+          class="mb-8 mx-auto text-center text-title"
+          style="
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            white-space: pre-line;
+            color: black;
+            font-size: 16px;
+          "
+        >
+          “Allah tidak akan menerima daging-daging dan darah-darah hewan qurban
+          <br />
+          mereka akan tetapi yang Allah terima adalah ketaqwaan dari kalian (QS.
+          Al-Hajj : 37).”</span
+        >
         <div class="col-lg-6 mx-auto text-center">
           <h2 class="mb-0">Sudah di kunjungi oleh</h2>
           <h2 class="text-gradient text-success mb-3">
@@ -29,13 +52,13 @@
         >
           <span class="text-title">Follow Us</span>
           <div style="display: flex; gap: 16px">
-           <a href="https://www.facebook.com/MidasThaiTea">
-            <img
+            <a href="https://www.facebook.com/MidasThaiTea">
+              <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/480px-Facebook_Logo_%282019%29.png"
                 height="35px"
                 alt="Logo"
               />
-           </a>
+            </a>
             <a href="https://www.instagram.com/Midasth4">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png"
@@ -94,7 +117,7 @@
   cursor: pointer;
 }
 
-.payments{
+.payments {
   display: flex;
   align-items: center;
   justify-content: center;

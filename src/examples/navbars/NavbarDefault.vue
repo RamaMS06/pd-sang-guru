@@ -37,20 +37,6 @@ const props = defineProps({
   },
 });
 
-// set text color
-const getTextColor = () => {
-  let color;
-  if (props.transparent && textDark.value) {
-    color = "text-dark";
-  } else if (props.transparent) {
-    color = "text-white";
-  } else {
-    color = "text-dark";
-  }
-
-  return color;
-};
-
 const goToSupportCenter = () => {
   return window.open(
     `https://wa.me/+6281374019998?text=Halo midas cafetaria, saya ingin bertanya :)`,
@@ -111,11 +97,7 @@ watch(
         title="Designed and Coded by Creative Tim"
         data-placement="bottom"
       >
-        <img
-          class="midas-thaitea-navbar"
-          src="@/assets/img/midas-thaitea.jpeg"
-        />
-        <span class="title-midas">Midas Cafetaria</span>
+        <span class="title-midas">PD. Sang Guru</span>
       </RouterLink>
       <RouterLink
         class="navbar-brand d-block d-md-none"
@@ -136,22 +118,14 @@ watch(
       </RouterLink>
       <div style="display: flex; gap: 16px">
         <div class="service-navbar" v-on:click="goToSupportCenter()">
-          <div
-            class="material-icons opacity-6 me-2 text-md"
-            :class="getTextColor()"
-          >
-            support_agent
-          </div>
-          <span class="checkout-text">Service</span>
+          <div class="material-icons opacity-6 me-2 text-md">support_agent</div>
+          <span class="nav-text">Bantuan</span>
         </div>
         <RouterLink class="checkout-navbar" to="/pages/checkout-pages/checkout">
-          <div
-            class="material-icons opacity-6 me-2 text-md"
-            :class="getTextColor()"
-          >
+          <div class="nav-icon material-icons opacity-6 me-2 text-md">
             shopping_cart
           </div>
-          <span class="checkout-text"> Cart </span>
+          <span class="nav-text"> Keranjang </span>
         </RouterLink>
       </div>
     </div>
@@ -174,6 +148,14 @@ watch(
 
   &:hover {
     color: black;
+
+    .nav-icon {
+      color: black;
+    }
+
+    .nav-text {
+      color: black;
+    }
   }
 }
 
@@ -189,10 +171,15 @@ watch(
   margin-left: 10px;
 }
 
-.checkout-text {
+.nav-text {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 600;
+  color: gray;
+}
+
+.nav-icon {
+  color: gray;
 }
 
 .shadow {
