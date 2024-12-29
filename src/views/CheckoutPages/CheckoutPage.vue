@@ -33,7 +33,6 @@ let isPay = ref(false);
 
 let showModalPayment = ref(false);
 
-
 const handleSubmitPayment = () => {
   goToWhatsapp();
 };
@@ -299,9 +298,20 @@ console.log(products);
                 text-align: end;
                 display: block;
               "
-              ><span style="color: red">* </span>Pengiriman 2 sampai 3 hari
+            >
+              <span style="color: red">* </span>Pengiriman 2 sampai 3 hari
               sebelum idul adha
             </span>
+
+            <span
+              style="
+                font-size: 10px;
+                font-style: italic;
+                text-align: end;
+                display: block;
+              "
+              > <span style="color: red">* </span>Gratis Ongkir JABODETABEK</span
+            >
             <div
               class="my-2"
               style="width: 100%; background-color: white; height: 0.5px"

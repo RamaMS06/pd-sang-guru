@@ -165,15 +165,31 @@ const testimonies = [
           font-size: 14px;
         "
       >
+        <span class="text-title" style="color: black; font-weight: 600"
+          >PD. Sang Guru</span
+        >
+        <div style="display: flex; justify-content: center; gap: 16px">
+          <a href="https://maps.app.goo.gl/qFrJWJvA9ashkGBP6">
+            <span style="text-align: center; display: block">
+              JL KH. Hasyim Ashari Gang Jambu, No. 38, Cipondoh, RT.006/RW.004,
+              <br />Gondrong, Kec. Tangerang, Kota Tangerang, Banten 15146
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 6px;
+          color: black;
+          font-size: 14px;
+        "
+      >
         <span class="text-title">Follow Us</span>
         <div style="display: flex; gap: 16px">
-          <!-- <a href="https://www.facebook.com/MidasThaiTea">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/480px-Facebook_Logo_%282019%29.png"
-              height="35px"
-              alt="Logo"
-            />
-          </a> -->
           <a href="https://www.instagram.com/pdsangguru/">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png"
@@ -210,11 +226,11 @@ const testimonies = [
 <style lang="scss">
 .footer-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: 75px;
   grid-gap: 10px;
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     gap: 28px;
