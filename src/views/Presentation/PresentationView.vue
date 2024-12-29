@@ -67,12 +67,16 @@ onUnmounted(() => {
 
 <style lang="scss">
 .bg-image {
-  background-image: url("/pemilik-sapi.jpeg");
-  filter: blur(10px) brightness(40%);
+  background-image: url("/cover-guru.jpeg");
+  filter: blur(3px) brightness(50%);
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+
+  @media (max-width: 700px) {
+    background-position: center;
+  }
 }
 </style>
