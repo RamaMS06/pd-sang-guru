@@ -5,7 +5,7 @@
         <div style="display: flex; justify-content: center; width: 100%">
           <img
             class="mb-5"
-            src="https://lh3.googleusercontent.com/proxy/7trqEhkqrrKpn8Im9tBIX7hnJzmUl1sL1wq9Caezi9PpiDCRBDRPRF2cbT7gm5B3bJbTtDHMUl_xkGzpl77bNRJMU3Y7QQl_Cln2yPrM0VA"
+            src="/ayat.png"
             style="object-fit: cover; width: 45%"
           />
         </div>
