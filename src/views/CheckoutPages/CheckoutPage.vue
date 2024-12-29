@@ -2,7 +2,6 @@
 import { onMounted, reactive, ref } from "vue";
 import NavbarDefault from "../..//examples/navbars/NavbarDefault.vue";
 import { RouterLink } from "vue-router";
-import AddressModal from "../Presentation/Components/AddressModal.vue";
 import PaymentModal from "../Presentation/Components/PaymentModal.vue";
 
 let products = reactive(JSON.parse(localStorage.getItem("products"))) || [];
@@ -28,41 +27,14 @@ let phone = ref("");
 
 let address = ref("");
 
-let addressMidas = ref("");
-
 let isPickup = ref(false);
 
 let isPay = ref(false);
 
-let showModalAddress = ref(false);
-
 let showModalPayment = ref(false);
 
-let uploadedFile = ref(null);
 
-const itemsAddress = [
-  {
-    id: 1,
-    name: "Midas Thaitea (Rika)",
-    phone: "+6281374019998",
-    desc: "Simpang Metur, Jalan Prabumulih-Baturaja, Lubai Ulu (Samping Indomaret) LUBAI ULU, KAB.MUARA ENIM, SUMATERA SELATAN ID 31173",
-  },
-  {
-    id: 2,
-    name: "Ruko MIDAS thaitea",
-    phone: "+6281379927964",
-    desc: "MIDAS THAITEA .Jalan Putri Candi, Peninjauan Sumsel, Baturaja Timur BATURAJA TIMUR, KAB. OGAN KOMERING ULU, SUMATERA SELATAN, ID 32111",
-  },
-];
-
-const handleSelectAddress = (item) => {
-  addressMidas.value = item.desc;
-  showModalAddress.value = false;
-  goToWhatsapp(item.phone, item);
-};
-
-const handleSubmitPayment = (file) => {
-  uploadedFile.value = file ? URL.createObjectURL(file) : null;
+const handleSubmitPayment = () => {
   goToWhatsapp();
 };
 
@@ -115,17 +87,15 @@ const decreaseQuantity = (index) => {
 };
 
 const submitCart = () => {
-  if (isPickup.value) {
-    showModalAddress.value = true;
-  } else if (isPay.value) {
+  if (isPay.value) {
     showModalPayment.value = true;
   } else {
     goToWhatsapp();
   }
 };
 
-const goToWhatsapp = (midasPhone = "+6281374019998", cabang) => {
-  const listMakananMinuman = products
+const goToWhatsapp = (midasPhone = "+628159830040") => {
+  const listProduk = products
     .map(
       (item, index) =>
         `${index + 1}. *${item.title}* - *Jumlah*: ${item.quantity}`
@@ -133,32 +103,25 @@ const goToWhatsapp = (midasPhone = "+6281374019998", cabang) => {
     .join("\n");
 
   const pickup = isPickup.value
-    ? `Pesanan diambil pada cabang:\n` +
-      `*Nama Cabang*: ${cabang.name}\n` +
-      `*Alamat Cabang*: ${cabang.desc}\n`
-    : "";
-
-  const newAddress = isPickup.value ? `` : `*Alamat*: ${address.value}\n\n`;
-
-  const buktiTransfer = uploadedFile.value
-    ? `Bukti Transfer:\n` + uploadedFile.value
-    : "";
+    ? `Pesanan diambil di tempat:\n` +
+      `*Alamat PD. Sang Guru*:\n` +
+      `jl.KH.Hasyim Ashari Rt 001/001 GOndrong prapatan Kel.Kenangan Cipondoh Tangerang\n\n`
+    : `Tolong antarkan pesanan saya ke alamat berikut:\n` +
+      `*Alamat*: ${address.value}\n\n`;
 
   const message =
-    `Halo Midas Cafe, saya ingin memesan makanan atau minuman.\n` +
+    `Halo PD.Sang Guru, saya ingin memesan Sapi atau Kambing.\n` +
     `Berikut detail pesanan saya:\n\n` +
     `*Nama*: ${name.value}\n` +
     `*No. HP*: ${phone.value}\n` +
-    newAddress +
     `\n*Pesanan*:\n` +
-    listMakananMinuman +
+    listProduk +
     `\n\n` +
     pickup +
     `*Total Harga*: ${formatter.format(
       summaries[0].value + summaries[1].value
     )}\n\n` +
-    `Tolong untuk konfirmasi pesanannya, Terima Kasih! \n\n` +
-    buktiTransfer;
+    `Tolong untuk konfirmasi pesanannya, Terima Kasih! \n\n`;
 
   const encodedMessage = encodeURIComponent(message);
   window.open(`https://wa.me/${midasPhone}?text=${encodedMessage}`);
@@ -321,26 +284,27 @@ console.log(products);
             </label>
           </div>
 
-          <AddressModal
-            :is-open="showModalAddress"
-            :items="itemsAddress"
-            @close="showModalAddress = false"
-            @select="handleSelectAddress"
-          />
           <PaymentModal
             :is-open="showModalPayment"
             @close="showModalPayment = false"
             @submit="handleSubmitPayment"
+            :totalPayment="summaries[0].value + summaries[1].value"
           />
 
           <div class="payment__cart__summary">
-            <hr
+            <span
               style="
-                width: 100%;
-                background-color: white;
-                height: 1px;
-                margin-bottom: 18px;
+                font-size: 10px;
+                font-style: italic;
+                text-align: end;
+                display: block;
               "
+              ><span style="color: red">* </span>Pengiriman 2 sampai 3 hari
+              sebelum idul adha
+            </span>
+            <div
+              class="my-2"
+              style="width: 100%; background-color: white; height: 0.5px"
             />
             <div
               class="payment__cart__summary__info mt-2"
@@ -404,7 +368,7 @@ console.log(products);
 .payment__cart {
   width: 55%;
   background-color: #5c6bc0;
-  height: 40rem;
+  height: 41rem;
   border-radius: 20px;
   padding: 34px;
   color: white;

@@ -215,66 +215,73 @@ export default [
     ],
   },
   {
-    heading: "Sapi Simental",
+    heading: "Sapi Simmental",
     description:
       "Simmental atau Swiss Fleckvieh adalah ras sapi dari Lembah Simme, Bern, Swiss Ras ini mengambil nama Simmental, nama sebuah lembah dari Sungai Simme di Bernese Oberland, Kanton Bern, Swiss",
     items: [
       {
         id: 1,
-        image: "https://starfarm.co.id/wp-content/uploads/2020/04/sapi-simental-star-farm.jpg",
-        title: "Sapi Simental (250-300kg)",
+        image:
+          "https://starfarm.co.id/wp-content/uploads/2020/04/sapi-simental-star-farm.jpg",
+        title: "Sapi Simmental (250-300kg)",
         price: 20000000,
         subtitle:
           "Simmental atau Swiss Fleckvieh adalah ras sapi dari Lembah Simme, Bern, Swiss",
       },
       {
         id: 2,
-        image: "https://media.suara.com/pictures/653x366/2022/07/10/55566-sapi-simental.jpg",
-        title: "Sapi Simental (300-330kg)",
+        image:
+          "https://media.suara.com/pictures/653x366/2022/07/10/55566-sapi-simental.jpg",
+        title: "Sapi Simmental (300-330kg)",
         subtitle:
           "Simmental atau Swiss Fleckvieh adalah ras sapi dari Lembah Simme, Bern, Swiss",
         price: 22500000,
       },
       {
         id: 3,
-        image: "https://media.istockphoto.com/id/504913640/id/foto/tampak-sapi-simmental.jpg?s=612x612&w=0&k=20&c=Z9L2hFmES6rox18c1njSeqhyUlVPG5VUpaLYYgFrPCI=",
-        title: "Sapi Simental (330-400kg)",
+        image:
+          "https://media.istockphoto.com/id/504913640/id/foto/tampak-sapi-simmental.jpg?s=612x612&w=0&k=20&c=Z9L2hFmES6rox18c1njSeqhyUlVPG5VUpaLYYgFrPCI=",
+        title: "Sapi Simmental (330-400kg)",
         subtitle:
           "Simmental atau Swiss Fleckvieh adalah ras sapi dari Lembah Simme, Bern, Swiss",
         price: 25000000,
       },
       {
         id: 4,
-        image: "https://cdn.pixabay.com/photo/2024/03/07/16/02/cow-8618844_1280.jpg",
-        title: "Sapi Simental (400-450kg)",
+        image:
+          "https://cdn.pixabay.com/photo/2024/03/07/16/02/cow-8618844_1280.jpg",
+        title: "Sapi Simmental (400-450kg)",
         subtitle:
           "Simmental atau Swiss Fleckvieh adalah ras sapi dari Lembah Simme, Bern, Swiss",
         price: 27500000,
       },
       {
         id: 5,
-        image: "https://thumb.tvonenews.com/thumbnail/2023/06/15/648a9895cc9d2-satu-ekor-sapi-kurban-presiden-jokowi-seberat-1-ton-di-palembang_1265_711.jpg",
-        title: "Sapi Simental (450-500kg)",
+        image:
+          "https://thumb.tvonenews.com/thumbnail/2023/06/15/648a9895cc9d2-satu-ekor-sapi-kurban-presiden-jokowi-seberat-1-ton-di-palembang_1265_711.jpg",
+        title: "Sapi Simmental (450-500kg)",
         subtitle:
           "Simmental atau Swiss Fleckvieh adalah ras sapi dari Lembah Simme, Bern, Swiss",
         price: 30000000,
       },
       {
         id: 6,
-        image: "https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1634025439/01h3v18a24sja15w8rnfx2ax56.jpg",
-        title: "Sapi Simental (500-530kg)",
+        image:
+          "https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1634025439/01h3v18a24sja15w8rnfx2ax56.jpg",
+        title: "Sapi Simmental (500-530kg)",
         subtitle:
           "Simmental atau Swiss Fleckvieh adalah ras sapi dari Lembah Simme, Bern, Swiss",
         price: 32500000,
       },
       {
         id: 7,
-        image: "https://dvgddkosknh6r.cloudfront.net/live/media/img/1718376041-jumat4.jpeg",
-        title: "Sapi Simental (530-550kg)",
+        image:
+          "https://dvgddkosknh6r.cloudfront.net/live/media/img/1718376041-jumat4.jpeg",
+        title: "Sapi Simmental (530-550kg)",
         subtitle:
           "Simmental atau Swiss Fleckvieh adalah ras sapi dari Lembah Simme, Bern, Swiss",
         price: 35000000,
-      }
-    ]
-    },
+      },
+    ],
+  },
 ];

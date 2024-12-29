@@ -97,6 +97,11 @@ watch(
         title="Designed and Coded by Creative Tim"
         data-placement="bottom"
       >
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/2938/2938232.png"
+          style="width: 20px; height: 20px"
+        />
+
         <span class="title-midas">PD. Sang Guru</span>
       </RouterLink>
       <RouterLink

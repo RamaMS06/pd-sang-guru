@@ -3,25 +3,24 @@ import { ref } from "vue";
 
 defineProps({
   isOpen: Boolean,
+  totalPayment: Number,
 });
 
 const emit = defineEmits(["close", "submit"]);
 
-const fileInput = ref(null);
-
 const uploadedFile = ref(null);
 
-const triggerFileInput = () => {
-  fileInput.value.click();
+const handleSubmit = () => {
+  emit("submit", uploadedFile.value);
+  emit("close");
+  uploadedFile.value = null;
 };
 
-const handleSubmit = () => {
-  if (uploadedFile.value) {
-    emit("submit", uploadedFile.value);
-    emit("close");
-    uploadedFile.value = null;
-  }
-};
+const formatter = new Intl.NumberFormat("id-ID", {
+  style: "currency",
+  currency: "IDR",
+  minimumFractionDigits: 0, // Removes decimals
+});
 
 const closeModal = () => {
   emit("close");
@@ -49,76 +48,51 @@ const closeModal = () => {
             align-items: center;
           "
         >
-          <span style="font-size: 18px; font-weight: 600"
-            >QRIS by Midas Cafetaria with BRI
-          </span>
+          <div style="display: flex; flex-direction: column">
+            <span style="font-size: 18px; font-weight: 600"
+              >Bank Transfer PD.Sang Guru
+            </span>
+            <span style="font-size: 12px; font-weight: 300">
+              <span style="color: red">*</span>
+              Setelah transfer, upload bukti ke WhatsApp PD. Sang Guru
+            </span>
+          </div>
           <div style="gap: 12px; display: flex; align-items: center">
             <img
-              src="@/assets/img/midas-thaitea.jpeg"
-              height="25px"
-              width="25px"
-              style="border-radius: 5px"
-            />
-            <img
-              src="https://i.pinimg.com/originals/ed/5d/c0/ed5dc0372ad7948f2ba04a88f125cc4e.png"
+              src="https://upload.wikimedia.org/wikipedia/commons/5/58/Logo_Bank_Mandiri_Taspen.png"
               height="35px"
             />
           </div>
         </div>
-        <span style="font-size: 14px; font-weight: 300">
-          Silahkan scan QR Code dibawah dengan Aplikasi Pembayaran pilihan Anda.
-        </span>
       </div>
-
-      <div
-        class="modal-body my-5"
-        style="
-          align-items: center;
-          justify-content: center;
-          display: flex;
-          flex-direction: column;
-        "
-      >
-        <img src="/qris-merchant.png" />
+      <div class="modal-body my-4">
+        <div style="display: flex; flex-direction: column; align-items: center">
+          <span style="font-size: 18px; color: black; font-weight: 600">
+            Bpk. H Ambri</span
+          >
+          <span style="font-size: 16px; color: black; font-weight: 400">
+            Mandiri Taspen - 2052809857411
+          </span>
+        </div>
 
         <div
           style="
             display: flex;
-            width: 100%;
             flex-direction: column;
             align-items: center;
+            margin-top: 16px;
           "
-          class="px-6"
         >
-          <div class="upload-container mt-6" v-on:click="triggerFileInput">
-            <input
-              type="file"
-              class="file-input"
-              ref="fileInput"
-              accept="image/*"
-              @change="handleUpload"
-            />
-            <span class="upload-text"> Upload Bukti Transfer </span>
-          </div>
-          <div v-if="uploadedFile">
-            <span style="font-size: 14px; font-weight: 400">
-              Bukti Transfer
-              <span style="font-weight: 600">{{ uploadedFile.name }}</span>
-              berhasil diupload!
-            </span>
-          </div>
+          <span style="font-size: 12px; color: green"> Total Bayar </span>
+          <span style="font-size: 28px; font-weight: 600">
+            {{ formatter.format(totalPayment) }}
+          </span>
         </div>
       </div>
 
       <div class="modal-footer">
-        <button class="cancel-button" @click="closeModal">Cancel</button>
-        <button
-          class="select-button"
-          @click="handleSubmit"
-          :disabled="!uploadedFile"
-        >
-          Submit
-        </button>
+        <button class="cancel-button" @click="closeModal">Batal</button>
+        <button class="select-button" @click="handleSubmit">Pesan</button>
       </div>
     </div>
   </div>

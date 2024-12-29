@@ -32,7 +32,7 @@ import DefaultCounterCard from "../../../examples/cards/counterCards/DefaultCoun
             <div class="col-md-4">
               <DefaultCounterCard
                 color="success"
-                title="Web Visitor"
+                title="Pengunjung Web"
                 description="PD. Sang Guru sudah dijumpai lebih dari 1,270 kali! "
                 :count="1270"
                 :duration="3000"
