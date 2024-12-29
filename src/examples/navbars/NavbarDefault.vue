@@ -39,7 +39,7 @@ const props = defineProps({
 
 const goToSupportCenter = () => {
   return window.open(
-    `https://wa.me/+6281374019998?text=Halo PD. Sang Guru, saya ingin bertanya :)`,
+    `https://wa.me/+628159830040?text=Halo PD. Sang Guru, saya ingin bertanya tentang ketersediaan Sapi atau Kambing nya`,
     "_blank"
   );
 };
