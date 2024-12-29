@@ -1,5 +1,5 @@
 export const badgesGradientCode = `<script setup>
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialBadge from "@/components/MaterialBadge.vue";
 </script>
 <template>
@@ -46,7 +46,7 @@ import MaterialBadge from "@/components/MaterialBadge.vue";
 `;
 
 export const badgesSimpleCode = `<script setup>
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialBadge from "@/components/MaterialBadge.vue";
 </script>
 <template>
@@ -79,7 +79,7 @@ import MaterialBadge from "@/components/MaterialBadge.vue";
 `;
 
 export const badgesRoundedCode = `<script setup>
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialBadge from "@/components/MaterialBadge.vue";
 </script>
 <template>

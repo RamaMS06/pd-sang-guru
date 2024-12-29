@@ -1,6 +1,6 @@
 export const popoversCode = `<script setup>
 import { onMounted } from "vue";
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialButton from "@/components/MaterialButton.vue";
 
 // popover
@@ -68,7 +68,7 @@ onMounted(() => {
 
 export const tooltipsCode = `<script setup>
 import { onMounted } from "vue";
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialButton from "@/components/MaterialButton.vue";
 
 // popover

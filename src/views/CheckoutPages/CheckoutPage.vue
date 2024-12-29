@@ -94,7 +94,7 @@ const submitCart = () => {
   }
 };
 
-const goToWhatsapp = (midasPhone = "+628159830040") => {
+const goToWhatsapp = (guruPhone = "+628159830040") => {
   const listProduk = products
     .map(
       (item, index) =>
@@ -124,7 +124,7 @@ const goToWhatsapp = (midasPhone = "+628159830040") => {
     `Tolong untuk konfirmasi pesanannya, Terima Kasih! \n\n`;
 
   const encodedMessage = encodeURIComponent(message);
-  window.open(`https://wa.me/${midasPhone}?text=${encodedMessage}`);
+  window.open(`https://wa.me/${guruPhone}?text=${encodedMessage}`);
 };
 onMounted(() => {
   products.forEach((item) => {

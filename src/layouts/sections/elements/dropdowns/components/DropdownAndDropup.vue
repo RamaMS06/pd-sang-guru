@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialButton from "@/components/MaterialButton.vue";
 
 let showDropdown = ref(false);

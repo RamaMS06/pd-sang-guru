@@ -1,5 +1,5 @@
 <script setup>
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialButton from "@/components/MaterialButton.vue";
 </script>
 <template>

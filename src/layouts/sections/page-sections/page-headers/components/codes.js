@@ -1,6 +1,6 @@
 /* eslint-disable no-useless-escape */
 export const header1Code = `<setup>
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialButton from "@/components/MaterialButton.vue";
 <\/script>
 <template>

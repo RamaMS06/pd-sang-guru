@@ -1,5 +1,5 @@
 <script setup>
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialBadge from "@/components/MaterialBadge.vue";
 </script>
 <template>

@@ -1,6 +1,6 @@
 /*
 =========================================================
-* Midas Cafetaria - v1.0.0
+* PD. Sang Guru - v1.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/vue-material-kit-pro

@@ -1,5 +1,5 @@
 export const inputStaticCode = `<script setup>
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialInput from "@/components/MaterialInput.vue";
 </script>
 <template>
@@ -21,7 +21,7 @@ import MaterialInput from "@/components/MaterialInput.vue";
 `;
 
 export const inputDynamicCode = `<script setup>
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialInput from "@/components/MaterialInput.vue";
 </script>
 <template>
@@ -42,7 +42,7 @@ import MaterialInput from "@/components/MaterialInput.vue";
 `;
 
 export const inputOutlinedCode = `<script setup>
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialInput from "@/components/MaterialInput.vue";
 </script>
 <template>
@@ -63,7 +63,7 @@ import MaterialInput from "@/components/MaterialInput.vue";
 `;
 
 export const inputIconCode = `<script setup>
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialInput from "@/components/MaterialInput.vue";
 </script>
 <template>
@@ -85,7 +85,7 @@ import MaterialInput from "@/components/MaterialInput.vue";
 `;
 
 export const inputSuccessCode = `<script setup>
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialInput from "@/components/MaterialInput.vue";
 </script>
 <template>
@@ -107,7 +107,7 @@ import MaterialInput from "@/components/MaterialInput.vue";
 `;
 
 export const inputErrorCode = `<script setup>
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialInput from "@/components/MaterialInput.vue";
 </script>
 <template>
@@ -124,7 +124,7 @@ import MaterialInput from "@/components/MaterialInput.vue";
 `;
 
 export const inputDisabledCode = `<script setup>
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialInput from "@/components/MaterialInput.vue";
 </script>
 <template>

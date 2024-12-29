@@ -1,7 +1,7 @@
 export const avatarGroupCode = `<script setup>
 import { onMounted } from "vue";
 
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialAvatar from "@/components/MaterialAvatar.vue";
 
 // images
@@ -71,7 +71,7 @@ onMounted(() => {
 `;
 
 export const avatarSizeCode = `<script setup>
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialAvatar from "@/components/MaterialAvatar.vue";
 
 // image

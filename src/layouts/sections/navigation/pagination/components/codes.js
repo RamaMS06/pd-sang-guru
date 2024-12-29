@@ -1,5 +1,5 @@
 export const paginationSimpleCode = `<script setup>
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialPagination from "@/components/MaterialPagination.vue";
 import MaterialPaginationItem from "@/components/MaterialPaginationItem.vue";
 </script>

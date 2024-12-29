@@ -1,5 +1,5 @@
 <script setup>
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialAlert from "@/components/MaterialAlert.vue";
 </script>
 <template>

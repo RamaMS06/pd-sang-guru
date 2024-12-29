@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted } from "vue";
 
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialAvatar from "@/components/MaterialAvatar.vue";
 import MaterialButton from "@/components/MaterialButton.vue";
 

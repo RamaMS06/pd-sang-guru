@@ -1,5 +1,5 @@
 export const buttonGroupsSimpleCode = `<script setup>
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialButton from "@/components/MaterialButton.vue";
 </script>
 <template>
@@ -20,7 +20,7 @@ import MaterialButton from "@/components/MaterialButton.vue";
 `;
 
 export const buttonGroupsOutlineCode = `<script setup>
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialButton from "@/components/MaterialButton.vue";
 </script>
 <template>
@@ -93,7 +93,7 @@ export const buttonGroupsRadioCode = `<script setup></script>
 `;
 
 export const buttonGroupsSizingCode = `<script setup>
-//Midas Cafetaria components
+//PD. Sang Guru components
 import MaterialButton from "@/components/MaterialButton.vue";
 </script>
 <template>
