@@ -1,13 +1,9 @@
 <template>
-  <section class="py-2 mt-8">
+  <section class="py-2 mt-6">
     <div class="container">
       <div class="row">
         <div style="display: flex; justify-content: center; width: 100%">
-          <img
-            class="mb-5"
-            src="/ayat.png"
-            style="object-fit: cover; width: 45%"
-          />
+          <img class="ayat mb-5" src="/ayat.png" style="object-fit: cover" />
         </div>
         <span
           class="mb-8 mx-auto text-center text-title"
@@ -126,6 +122,13 @@
 
   @media (max-width: 768px) {
     flex-direction: column;
+  }
+}
+
+.ayat {
+  width: 50%;
+  @media (max-width: 768px) {
+    width: 100%;
   }
 }
 </style>
