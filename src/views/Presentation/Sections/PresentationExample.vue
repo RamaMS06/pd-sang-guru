@@ -52,13 +52,15 @@ export default {
       <div class="row">
         <div class="row justify-content-center text-center my-sm-5">
           <div class="col-lg-6">
-            <MaterialBadge color="success" class="mb-3"
+            <MaterialBadge v-motion-pop-visible color="success" class="mb-3"
               >Daftar sapi & kambing</MaterialBadge
             >
-            <h2 class="text-dark mb-0">Banyak Jenis Sapi & Kambing Disini</h2>
-            <p class="lead text-title" style="font-size: 18px">
-              Kalian bisa pilih dibawah
-            </p>
+            <div v-motion-slide-bottom>
+              <h2 class="text-dark mb-0">Banyak Jenis Sapi & Kambing Disini</h2>
+              <p class="lead text-title" style="font-size: 18px">
+                Kalian bisa pilih dibawah
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -71,6 +73,7 @@ export default {
       >
         <div :class="`${col1 ?? 'col-lg-3'}`">
           <div
+            v-motion-slide-left
             class="position-sticky pb-lg-5 pb-3 mt-lg-0 mt-5 ps-2"
             style="top: 100px"
           >

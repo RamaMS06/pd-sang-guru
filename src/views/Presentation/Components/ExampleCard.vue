@@ -106,6 +106,7 @@ export default {
 </script>
 <template>
   <div
+    v-motion-fade-visible-once
     class="card move-on-hover"
     v-bind="$attrs"
     :data-bs-toggle="pro ? 'tooltip' : null"
@@ -121,7 +122,7 @@ export default {
     />
   </div>
   <div class="mt-2 ms-2">
-    <h6 class="text-title mb-0">{{ props.title }}</h6>
+    <h6 v-motion-slide-top class="text-title mb-0">{{ props.title }}</h6>
     <span class="text-secondary text-sm font-weight-normal text-info">
       {{ formatter.format(price) }}
     </span>

@@ -154,7 +154,7 @@ console.log(products);
     </RouterLink>
   </div>
   <div class="cart container position-sticky mt-8" v-if="products.length > 0">
-    <div class="content__cart">
+    <div class="content__cart" v-motion-slide-left>
       <span class="content__cart--title">Keranjang Saya</span>
       <span class="content__cart--desc"
         >Kamu memiliki produk sebanyak {{ products.length }} dikeranjang</span
@@ -214,7 +214,7 @@ console.log(products);
         </div>
       </div>
     </div>
-    <div class="payment__cart">
+    <div class="payment__cart" v-motion-slide-right>
       <span class="payment__cart--title">Detail Belanja</span>
       <div>
         <form @submit.prevent="submitCart">
@@ -310,7 +310,8 @@ console.log(products);
                 text-align: end;
                 display: block;
               "
-              > <span style="color: red">* </span>Gratis Ongkir JABODETABEK</span
+            >
+              <span style="color: red">* </span>Gratis Ongkir JABODETABEK</span
             >
             <div
               class="my-2"

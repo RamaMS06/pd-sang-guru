@@ -36,7 +36,7 @@ onUnmounted(() => {
       <div class="bg-image"></div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-7 text-center mx-auto position-relative">
+          <div class="col-lg-7 text-center mx-auto position-relative" v-motion-pop-visible-once>
             <h1
               class="text-white pt-3 mt-n5 me-2"
               :style="{ display: 'inline-block ' }"

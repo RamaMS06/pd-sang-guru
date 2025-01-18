@@ -10,23 +10,25 @@ import DefaultCounterCard from "../../examples/cards/counterCards/DefaultCounter
         <NavbarDefault :sticky="true" />
       </div>
     </div>
-    <img class="image-profile" src="/pemilik-sapi.jpeg" />
 
-    <div class="row justify-content-center my-6">
-      <div class="profile-name col-md-4 position-relative">
-        <DefaultCounterCard
-          label="H. Ambri"
-          color="success"
-          title="Pemilik Sapi"
-          divider="vertical"
-        />
-      </div>
-      <div class="profile-year col-md-4">
-        <DefaultCounterCard
-          label="2015"
-          color="success"
-          title="Tahun Berdiri"
-        />
+    <div v-motion-slide-top>
+      <img class="image-profile" src="/pemilik-sapi.jpeg" />
+      <div class="row justify-content-center my-6">
+        <div class="profile-name col-md-4 position-relative">
+          <DefaultCounterCard
+            label="H. Ambri"
+            color="success"
+            title="Pemilik Sapi"
+            divider="vertical"
+          />
+        </div>
+        <div class="profile-year col-md-4">
+          <DefaultCounterCard
+            label="2015"
+            color="success"
+            title="Tahun Berdiri"
+          />
+        </div>
       </div>
     </div>
 
@@ -81,23 +83,25 @@ import DefaultCounterCard from "../../examples/cards/counterCards/DefaultCounter
       </div>
     </div>
 
-    <img class="image-profile" src="/penjaga.jpeg" />
+    <div v-motion-slide-bottom>
+      <img class="image-profile" src="/penjaga.jpeg" />
 
-    <div class="row justify-content-center my-6">
-      <div class="profile-name col-md-4 position-relative">
-        <DefaultCounterCard
-          label="Ade Depi R.A"
-          color="success"
-          title="Penjaga Kandang"
-          divider="vertical"
-        />
-      </div>
-      <div class="profile-year col-md-4">
-        <DefaultCounterCard
-          label="085780878176"
-          color="success"
-          title="No Handphone"
-        />
+      <div class="row justify-content-center my-6">
+        <div class="profile-name col-md-4 position-relative">
+          <DefaultCounterCard
+            label="Ade Depi R.A"
+            color="success"
+            title="Penjaga Kandang"
+            divider="vertical"
+          />
+        </div>
+        <div class="profile-year col-md-4">
+          <DefaultCounterCard
+            label="085780878176"
+            color="success"
+            title="No Handphone"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -115,17 +119,6 @@ import DefaultCounterCard from "../../examples/cards/counterCards/DefaultCounter
   margin-right: auto;
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
-}
-
-.profile-name,
-.profile-year {
-  animation: fadeIn 1s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
 }
 
 .grid-profile {

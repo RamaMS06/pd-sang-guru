@@ -2,10 +2,14 @@
   <section class="py-2 mt-6 text-title">
     <div class="container">
       <div class="row">
-        <div style="display: flex; justify-content: center; width: 100%">
+        <div
+          v-motion-fade-visible
+          style="display: flex; justify-content: center; width: 100%"
+        >
           <img class="ayat mb-5" src="/ayat.png" style="object-fit: cover" />
         </div>
         <span
+          v-motion-fade-visible
           class="mb-6 mx-auto text-center text-title"
           style="
             display: flex;
@@ -47,7 +51,7 @@
           </a>
         </span>
 
-        <img class="img-maps" src="/alamat-maps.png" />
+        <img v-motion-slide-top class="img-maps" src="/alamat-maps.png" />
       </div>
     </div>
 

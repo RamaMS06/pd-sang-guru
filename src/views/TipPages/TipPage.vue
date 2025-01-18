@@ -40,7 +40,10 @@ const umur = [
         font-weight: 600;
       "
     >
-      <span class="text-dark text-title" style="font-size: 25px"
+      <span
+        v-motion-pop-visible
+        class="text-dark text-title"
+        style="font-size: 25px"
         >Tips Memilih Hewan Kurban Terbaik dan Bebas PMK</span
       >
       <span
@@ -52,6 +55,7 @@ const umur = [
       <img
         class="image-tip mt-4"
         src="https://pustaka.setjen.pertanian.go.id/images/gambar_berita/2021/Juli/IMG-20210707-WA0023.jpg"
+        loading="eager"
       />
     </div>
     <div
@@ -104,6 +108,7 @@ const umur = [
       </div>
 
       <span class="title-tip text-success mt-4">#Tidak Cacat</span>
+
       <span class="text-dark" style="font-size: 15px">
         Selain kesehatan fisik, tips memilih hewan kurban juga memperhatikan
         apakah hewan kurban memiliki kecacatan atau tidak. Pastikan hewan
@@ -184,7 +189,6 @@ const umur = [
   margin-right: auto;
   opacity: 0;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s ease-in-out forwards;
 }
 
 .profile-name,

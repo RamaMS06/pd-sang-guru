@@ -101,6 +101,7 @@ const testimonies = [
         class="testimoni__item"
         v-for="(testinmoni, id) in testimonies"
         :key="id"
+        v-motion-slide-top
       >
         <div class="testimoni__item__header">
           <div class="testimoni__item__header--avatar">
