@@ -1,5 +1,3 @@
-
-
 <template>
   <section class="py-2 mt-6 text-title">
     <div class="container">
@@ -23,6 +21,33 @@
           mereka akan tetapi yang Allah terima adalah ketaqwaan dari kalian (QS.
           Al-Hajj : 37).”</span
         >
+      </div>
+    </div>
+
+    <div class="mt-5" style="text-align: center">
+      <span class="text-title" style="color: black; font-weight: 600"
+        >Alamat PD. Sang Guru</span
+      >
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 16px;
+        "
+        class="mt-2"
+      >
+        <span>
+          JL KH. Hasyim Ashari Gang Jambu, No. 38, Cipondoh, RT.006/RW.004,
+          <br />Gondrong, Kec. Tangerang, Kota Tangerang, Banten 15146<br />
+          <a href="https://maps.app.goo.gl/qFrJWJvA9ashkGBP6">
+            <span style="text-decoration: underline; font-style: italic"
+              >https://maps.app.goo.gl/qFrJWJvA9ashkGBP6</span
+            >
+          </a>
+        </span>
+
+        <img class="img-maps" src="/alamat-maps.png" />
       </div>
     </div>
 
@@ -71,33 +96,6 @@
             alt="Logo"
           />
         </div>
-      </div>
-    </div>
-
-    <div class="mt-5" style="text-align: center" >
-      <span class="text-title" style="color: black; font-weight: 600"
-        >Alamat PD. Sang Guru</span
-      >
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          gap: 16px;
-        "
-        class="mt-2"
-      >
-        <span>
-          JL KH. Hasyim Ashari Gang Jambu, No. 38, Cipondoh, RT.006/RW.004,
-          <br />Gondrong, Kec. Tangerang, Kota Tangerang, Banten 15146<br />
-          <a href="https://maps.app.goo.gl/qFrJWJvA9ashkGBP6">
-            <span style="text-decoration: underline; font-style: italic"
-              >https://maps.app.goo.gl/qFrJWJvA9ashkGBP6</span
-            >
-          </a>
-        </span>
-
-        <img class="img-maps" src="/alamat-maps.png" />
       </div>
     </div>
   </section>
