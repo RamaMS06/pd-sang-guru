@@ -112,34 +112,78 @@ watch(
         title="Designed and Coded by Creative Tim"
         data-placement="bottom"
       >
-        <img
-          class="guru-thaitea-navbar"
-          src="https://cdn-icons-png.flaticon.com/512/2938/2938232.png"
-        />
+        PD. Sang Guru
       </RouterLink>
-      <div style="display: flex; gap: 16px">
-        <div class="service-navbar" v-on:click="showModalContact = true">
-          <div class="material-icons opacity-6 me-2 text-md">support_agent</div>
-          <span class="nav-text">Bantuan</span>
-        </div>
-        <RouterLink class="checkout-navbar" to="/pages/checkout-pages/checkout">
-          <div class="nav-icon material-icons opacity-6 me-2 text-md">
-            shopping_cart
+      <button
+        class="navbar-toggler shadow-none ms-2"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navigation"
+        aria-controls="navigation"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon mt-2">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </span>
+      </button>
+      <div
+        class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0"
+        id="navigation"
+      >
+        <ul class="navbar-nav navbar-nav-hover ms-auto">
+          <RouterLink
+            class="navbar-brand d-block d-md-none"
+            :class="
+              props.transparent || props.dark
+                ? 'text-white'
+                : 'font-weight-bolder ms-sm-3'
+            "
+            to="/"
+            rel="tooltip"
+            title="Designed and Coded by Creative Tim"
+            data-placement="bottom"
+          >
+            <img
+              class="guru-navbar"
+              src="https://cdn-icons-png.flaticon.com/512/2938/2938232.png"
+            />
+          </RouterLink>
+          <div style="display: flex; gap: 16px">
+            <div class="service-navbar" v-on:click="showModalContact = true">
+              <div class="material-icons opacity-6 me-2 text-md">
+                support_agent
+              </div>
+              <span class="nav-text">Bantuan</span>
+            </div>
+            <RouterLink
+              class="checkout-navbar"
+              to="/pages/checkout-pages/checkout"
+            >
+              <div class="nav-icon material-icons opacity-6 me-2 text-md">
+                shopping_cart
+              </div>
+              <span class="nav-text"> Keranjang </span>
+            </RouterLink>
+            <RouterLink
+              class="checkout-navbar"
+              to="/pages/profile-pages/profile"
+            >
+              <div class="nav-icon material-icons opacity-6 me-2 text-md">
+                account_circle
+              </div>
+              <span class="nav-text"> Profil </span>
+            </RouterLink>
+            <RouterLink class="checkout-navbar" to="/pages/tip-pages/tip">
+              <div class="nav-icon material-icons opacity-6 me-2 text-md">
+                lightbulb
+              </div>
+              <span class="nav-text"> Tips </span>
+            </RouterLink>
           </div>
-          <span class="nav-text"> Keranjang </span>
-        </RouterLink>
-        <RouterLink class="checkout-navbar" to="/pages/profile-pages/profile">
-          <div class="nav-icon material-icons opacity-6 me-2 text-md">
-            account_circle
-          </div>
-          <span class="nav-text"> Profil </span>
-        </RouterLink>
-        <RouterLink class="checkout-navbar" to="/pages/tip-pages/tip">
-          <div class="nav-icon material-icons opacity-6 me-2 text-md">
-            lightbulb
-          </div>
-          <span class="nav-text"> Tips </span>
-        </RouterLink>
+        </ul>
       </div>
     </div>
   </nav>
@@ -174,11 +218,14 @@ watch(
   }
 }
 
-.guru-thaitea-navbar {
+.guru-navbar {
   height: 40px;
   width: 40px;
   border-radius: 5px;
   box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .title-guru {
@@ -193,7 +240,7 @@ watch(
   color: gray;
 
   @media (max-width: 768px) {
-    display: none;
+    // display: none;
   }
 }
 
