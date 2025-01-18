@@ -84,7 +84,16 @@ export default {
           <div :class="`row `">
             <div
               class="col-md-4 mt-md-0"
-              v-for="{ id, image, title, subtitle, route, price, pro } in items"
+              v-for="{
+                id,
+                image,
+                title,
+                subtitle,
+                route,
+                price,
+                pro,
+                type,
+              } in items"
               :key="title"
             >
               <ExampleCard
@@ -96,6 +105,7 @@ export default {
                 :route="route"
                 :price="price"
                 :pro="pro"
+                :type="type"
               />
             </div>
           </div>

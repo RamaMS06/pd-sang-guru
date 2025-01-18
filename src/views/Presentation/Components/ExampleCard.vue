@@ -43,6 +43,10 @@ const props = defineProps({
     type: Number,
     default: 1,
   },
+  type: {
+    type: String,
+    default: "A",
+  },
 });
 
 const formatter = new Intl.NumberFormat("id-ID", {
@@ -118,11 +122,13 @@ export default {
   </div>
   <div class="mt-2 ms-2">
     <h6 class="text-title mb-0">{{ props.title }}</h6>
-    <p class="text-secondary text-sm font-weight-normal text-info">
+    <span class="text-secondary text-sm font-weight-normal text-info">
       {{ formatter.format(price) }}
+    </span>
+    <p class="text-secondary text-sm font-weight-normal text-dark mt-1">
+      Tipe <span class="text-success font-weight-bold">{{ type }}</span>
     </p>
   </div>
-
   <div class="buttons-footer">
     <button
       type="button"

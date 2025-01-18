@@ -26,6 +26,7 @@ export default [
         subtitle:
           "Sapi Brahman, keturunan Zebu dari India, masuk ke Amerika pada 1849 dan tumbuh pesat.",
         route: "page-headers",
+        type: "F",
       },
       {
         id: 2,
@@ -35,6 +36,7 @@ export default [
           "Sapi Brahman, keturunan Zebu dari India, masuk ke Amerika pada 1849 dan tumbuh pesat.",
         price: 22500000,
         route: "page-features",
+        type: "E",
       },
       {
         id: 3,
@@ -44,6 +46,7 @@ export default [
           "Sapi Brahman, keturunan Zebu dari India, masuk ke Amerika pada 1849 dan tumbuh pesat.",
         price: 25000000,
         route: "page-headers",
+        type: "D",
       },
       {
         id: 4,
@@ -53,6 +56,7 @@ export default [
           "Sapi Brahman, keturunan Zebu dari India, masuk ke Amerika pada 1849 dan tumbuh pesat.",
         route: "page-features",
         price: 27500000,
+        type: "C",
       },
       {
         id: 5,
@@ -62,6 +66,7 @@ export default [
           "Sapi Brahman, keturunan Zebu dari India, masuk ke Amerika pada 1849 dan tumbuh pesat.",
         route: "page-features",
         price: 30000000,
+        type: "B",
       },
       {
         id: 6,
@@ -71,6 +76,7 @@ export default [
           "Sapi Brahman, keturunan Zebu dari India, masuk ke Amerika pada 1849 dan tumbuh pesat.",
         route: "page-features",
         price: 32500000,
+        type: "A",
       },
       {
         id: 7,
@@ -81,6 +87,7 @@ export default [
           "Sapi Brahman, keturunan Zebu dari India, masuk ke Amerika pada 1849 dan tumbuh pesat.",
         route: "page-features",
         price: 35000000,
+        type: "A+",
       },
     ],
   },
@@ -96,6 +103,7 @@ export default [
         price: 20000000,
         subtitle:
           "Keturunan Bos Taurus dari Prancis, banyak dibudidayakan di Indonesia",
+        type: "F",
       },
       {
         id: 2,
@@ -104,6 +112,7 @@ export default [
         subtitle:
           "Keturunan Bos Taurus dari Prancis, banyak dibudidayakan di Indonesia",
         price: 22500000,
+        type: "E",
       },
       {
         id: 3,
@@ -112,6 +121,7 @@ export default [
         subtitle:
           "Keturunan Bos Taurus dari Prancis, banyak dibudidayakan di Indonesia",
         price: 25000000,
+        type: "D",
       },
       {
         id: 4,
@@ -120,6 +130,7 @@ export default [
         subtitle:
           "Keturunan Bos Taurus dari Prancis, banyak dibudidayakan di Indonesia",
         price: 27500000,
+        type: "C",
       },
       {
         id: 5,
@@ -128,6 +139,7 @@ export default [
         subtitle:
           "Keturunan Bos Taurus dari Prancis, banyak dibudidayakan di Indonesia",
         price: 30000000,
+        type: "B",
       },
       {
         id: 6,
@@ -136,6 +148,7 @@ export default [
         subtitle:
           "Keturunan Bos Taurus dari Prancis, banyak dibudidayakan di Indonesia",
         price: 32500000,
+        type: "A",
       },
       {
         id: 7,
@@ -144,6 +157,7 @@ export default [
         subtitle:
           "Keturunan Bos Taurus dari Prancis, banyak dibudidayakan di Indonesia",
         price: 35000000,
+        type: "A+",
       },
     ],
   },
@@ -160,6 +174,7 @@ export default [
         price: 20000000,
         subtitle:
           "Sapi Peranakan Ongole (PO) dikenal sebagai Sapi Lokal, Jawa, atau Putih.",
+        type: "F",
       },
       {
         id: 2,
@@ -168,6 +183,7 @@ export default [
         subtitle:
           "Sapi Peranakan Ongole (PO) dikenal sebagai Sapi Lokal, Jawa, atau Putih.",
         price: 22500000,
+        type: "E",
       },
       {
         id: 3,
@@ -176,6 +192,7 @@ export default [
         subtitle:
           "Sapi Peranakan Ongole (PO) dikenal sebagai Sapi Lokal, Jawa, atau Putih.",
         price: 25000000,
+        type: "D",
       },
       {
         id: 4,
@@ -184,6 +201,7 @@ export default [
         subtitle:
           "Sapi Peranakan Ongole (PO) dikenal sebagai Sapi Lokal, Jawa, atau Putih.",
         price: 27500000,
+        type: "C",
       },
       {
         id: 5,
@@ -193,6 +211,7 @@ export default [
         subtitle:
           "Sapi Peranakan Ongole (PO) dikenal sebagai Sapi Lokal, Jawa, atau Putih.",
         price: 30000000,
+        type: "B",
       },
       {
         id: 6,
@@ -202,6 +221,7 @@ export default [
         subtitle:
           "Sapi Peranakan Ongole (PO) dikenal sebagai Sapi Lokal, Jawa, atau Putih.",
         price: 32500000,
+        type: "A",
       },
       {
         id: 7,
@@ -227,6 +247,7 @@ export default [
         price: 20000000,
         subtitle:
           "Simmental atau Swiss Fleckvieh adalah ras sapi dari Lembah Simme, Bern, Swiss",
+          type: "F",
       },
       {
         id: 2,
@@ -236,6 +257,7 @@ export default [
         subtitle:
           "Simmental atau Swiss Fleckvieh adalah ras sapi dari Lembah Simme, Bern, Swiss",
         price: 22500000,
+        type: "E",
       },
       {
         id: 3,
@@ -245,6 +267,7 @@ export default [
         subtitle:
           "Simmental atau Swiss Fleckvieh adalah ras sapi dari Lembah Simme, Bern, Swiss",
         price: 25000000,
+        type: "D",
       },
       {
         id: 4,
@@ -254,6 +277,7 @@ export default [
         subtitle:
           "Simmental atau Swiss Fleckvieh adalah ras sapi dari Lembah Simme, Bern, Swiss",
         price: 27500000,
+        type: "C",
       },
       {
         id: 5,
@@ -263,6 +287,7 @@ export default [
         subtitle:
           "Simmental atau Swiss Fleckvieh adalah ras sapi dari Lembah Simme, Bern, Swiss",
         price: 30000000,
+        type: "B",
       },
       {
         id: 6,
@@ -272,6 +297,7 @@ export default [
         subtitle:
           "Simmental atau Swiss Fleckvieh adalah ras sapi dari Lembah Simme, Bern, Swiss",
         price: 32500000,
+        type: "A",
       },
       {
         id: 7,
@@ -281,6 +307,7 @@ export default [
         subtitle:
           "Simmental atau Swiss Fleckvieh adalah ras sapi dari Lembah Simme, Bern, Swiss",
         price: 35000000,
+        type: "A+",
       },
     ],
   },
@@ -296,6 +323,7 @@ export default [
         subtitle:
           "Kambing Jawa adalah kambing lokal yang banyak dibudidayakan di Indonesia",
         price: 4000000,
+        type: "D",
       },
       {
         id: 2,
@@ -304,6 +332,7 @@ export default [
         subtitle:
           "Domba Peranakan Ongole (PO) adalah domba lokal yang banyak dibudidayakan di Indonesia",
         price: 2500000,
+        type: "C",
       },
       {
         id: 3,
@@ -312,6 +341,7 @@ export default [
         subtitle:
           "Domba Garut adalah domba lokal yang banyak dibudidayakan di Indonesia",
         price: 4500000,
+        type: "B",
       },
       {
         id: 4,
@@ -320,6 +350,7 @@ export default [
         subtitle:
           "Kambing Etawa adalah kambing lokal yang banyak dibudidayakan di Indonesia",
         price: 7500000,
+        type: "A",
       },
     ],
   },
