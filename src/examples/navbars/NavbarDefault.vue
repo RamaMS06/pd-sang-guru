@@ -2,6 +2,7 @@
 import { RouterLink } from "vue-router";
 import { ref, watch } from "vue";
 import { useWindowsWidth } from "../../assets/js/useWindowsWidth";
+import ContactModal from "../../views/Presentation/Components/ContactModal.vue";
 
 const props = defineProps({
   action: {
@@ -36,6 +37,8 @@ const props = defineProps({
     default: false,
   },
 });
+
+let showModalContact = ref(false);
 
 const goToSupportCenter = () => {
   return window.open(
@@ -144,9 +147,16 @@ watch(
           </div>
           <span class="nav-text"> Tips </span>
         </RouterLink>
+        <div class="checkout-navbar" v-on:click="showModalContact = true">
+          <div class="nav-icon material-icons opacity-6 me-2 text-md">
+            contact_phone
+          </div>
+          <span class="nav-text"> Kontak </span>
+        </div>
       </div>
     </div>
   </nav>
+  <ContactModal :isOpen="showModalContact" @close="showModalContact = false" />
   <!-- End Navbar -->
 </template>
 
@@ -158,6 +168,7 @@ watch(
 }
 .checkout-navbar,
 .service-navbar {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
