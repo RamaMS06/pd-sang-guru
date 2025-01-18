@@ -3,6 +3,7 @@ import PresentationView from "../views/Presentation/PresentationView.vue";
 import CheckoutPage from "../views/CheckoutPages/CheckoutPage.vue";
 import ProfilePage from "../views/ProfilePages/ProfilePage.vue";
 import TipPage from "../views/TipPages/TipPage.vue";
+import TestimoniPage from "../views/TestimoniPages/TestimoniPage.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: "/pages/tip-pages/tip",
       name: "tip",
       component: TipPage,
+    },
+    {
+      path: "/pages/testimoni-pages/testimoni",
+      name: "testimoni",
+      component: TestimoniPage,
     },
   ],
 });

@@ -182,6 +182,15 @@ watch(
               </div>
               <span class="nav-text"> Tips </span>
             </RouterLink>
+            <RouterLink
+              class="checkout-navbar"
+              to="/pages/testimoni-pages/testimoni"
+            >
+              <div class="nav-icon material-icons opacity-6 me-2 text-md">
+                star
+              </div>
+              <span class="nav-text"> Testimoni </span>
+            </RouterLink>
           </div>
         </ul>
       </div>
