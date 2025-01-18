@@ -40,13 +40,6 @@ const props = defineProps({
 
 let showModalContact = ref(false);
 
-const goToSupportCenter = () => {
-  return window.open(
-    `https://wa.me/+628159830040?text=Halo PD. Sang Guru, saya ingin bertanya tentang ketersediaan Sapi atau Kambing nya`,
-    "_blank"
-  );
-};
-
 // set nav color on mobile && desktop
 
 let textDark = ref(props.darkText);
@@ -125,7 +118,7 @@ watch(
         />
       </RouterLink>
       <div style="display: flex; gap: 16px">
-        <div class="service-navbar" v-on:click="goToSupportCenter()">
+        <div class="service-navbar" v-on:click="showModalContact = true">
           <div class="material-icons opacity-6 me-2 text-md">support_agent</div>
           <span class="nav-text">Bantuan</span>
         </div>
@@ -147,12 +140,6 @@ watch(
           </div>
           <span class="nav-text"> Tips </span>
         </RouterLink>
-        <div class="checkout-navbar" v-on:click="showModalContact = true">
-          <div class="nav-icon material-icons opacity-6 me-2 text-md">
-            contact_phone
-          </div>
-          <span class="nav-text"> Kontak </span>
-        </div>
       </div>
     </div>
   </nav>

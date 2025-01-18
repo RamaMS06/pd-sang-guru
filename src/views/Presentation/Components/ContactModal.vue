@@ -48,7 +48,7 @@ const goToWhatsapp = (phone) => {
             </span>
             <span style="font-size: 12px; font-weight: 300">
               <span style="color: red">*</span>
-              Berikut kontak para pengurus dan pemilik PD. Sang Guru
+              Kontak pengurus PD. Sang Guru untuk bantuan
             </span>
           </div>
         </div>
