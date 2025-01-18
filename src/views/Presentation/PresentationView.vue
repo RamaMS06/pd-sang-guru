@@ -32,7 +32,7 @@ onUnmounted(() => {
     </div>
   </div>
   <Header>
-    <div class="page-header min-vh-75" loading="lazy">
+    <div class="page-header min-vh-95" loading="lazy">
       <div class="bg-image"></div>
       <div class="container">
         <div class="row">
@@ -67,8 +67,8 @@ onUnmounted(() => {
 
 <style lang="scss">
 .bg-image {
-  background-image: url("/cover-guru.jpeg");
-  filter: blur(3px) brightness(50%);
+  background-image: url("https://asset.kompas.com/crops/uvVS5wU9lygJ0Mj9rxtBUWKjGvA=/0x105:1280x958/1200x800/data/photo/2020/07/09/5f074539ca770.jpeg");
+  filter: blur(1.5px) brightness(50%);
   height: 100%;
   width: 100%;
   position: absolute;

@@ -138,6 +138,12 @@ watch(
           </div>
           <span class="nav-text"> Profil </span>
         </RouterLink>
+        <RouterLink class="checkout-navbar" to="/pages/tip-pages/tip">
+          <div class="nav-icon material-icons opacity-6 me-2 text-md">
+            lightbulb
+          </div>
+          <span class="nav-text"> Tips </span>
+        </RouterLink>
       </div>
     </div>
   </nav>

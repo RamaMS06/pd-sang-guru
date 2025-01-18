@@ -165,40 +165,6 @@ const testimonies = [
           font-size: 14px;
         "
       >
-        <span class="text-title" style="color: black; font-weight: 600"
-          >PD. Sang Guru</span
-        >
-        <div
-          style="
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 16px;
-          "
-          class=""
-        >
-          <span style="text-align: center; display: block">
-            JL KH. Hasyim Ashari Gang Jambu, No. 38, Cipondoh, RT.006/RW.004,
-            <br />Gondrong, Kec. Tangerang, Kota Tangerang, Banten 15146<br />
-            <a href="https://maps.app.goo.gl/qFrJWJvA9ashkGBP6">
-              <span style="text-decoration: underline; font-style: italic"
-                >https://maps.app.goo.gl/qFrJWJvA9ashkGBP6</span
-              >
-            </a>
-          </span>
-        </div>
-      </div>
-      <div
-        style="
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          gap: 6px;
-          color: black;
-          font-size: 14px;
-        "
-      >
         <span class="text-title">Follow Us</span>
         <div style="display: flex; gap: 16px">
           <a
@@ -233,13 +199,40 @@ const testimonies = [
         </div>
       </div>
     </div>
+
+    <div class="mt-5" style="text-align: center" >
+      <span class="text-title" style="color: black; font-weight: 600"
+        >Alamat PD. Sang Guru</span
+      >
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 16px;
+        "
+        class="mt-2"
+      >
+        <span>
+          JL KH. Hasyim Ashari Gang Jambu, No. 38, Cipondoh, RT.006/RW.004,
+          <br />Gondrong, Kec. Tangerang, Kota Tangerang, Banten 15146<br />
+          <a href="https://maps.app.goo.gl/qFrJWJvA9ashkGBP6">
+            <span style="text-decoration: underline; font-style: italic"
+              >https://maps.app.goo.gl/qFrJWJvA9ashkGBP6</span
+            >
+          </a>
+        </span>
+
+        <img class="img-maps" src="/alamat-maps.png" />
+      </div>
+    </div>
   </section>
 </template>
 
 <style lang="scss">
 .footer-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-evenly;
   grid-auto-rows: 75px;
   grid-gap: 10px;
 
@@ -306,5 +299,14 @@ const testimonies = [
       }
     }
   }
+}
+
+.img-maps {
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ddd;
 }
 </style>
