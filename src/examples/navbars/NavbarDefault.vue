@@ -132,6 +132,12 @@ watch(
           </div>
           <span class="nav-text"> Keranjang </span>
         </RouterLink>
+        <RouterLink class="checkout-navbar" to="/pages/profile-pages/profile">
+          <div class="nav-icon material-icons opacity-6 me-2 text-md">
+            account_circle
+          </div>
+          <span class="nav-text"> Profil </span>
+        </RouterLink>
       </div>
     </div>
   </nav>
@@ -181,6 +187,10 @@ watch(
   font-size: 14px;
   font-weight: 600;
   color: gray;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .nav-icon {
