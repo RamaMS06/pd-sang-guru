@@ -24,7 +24,7 @@ const router = createRouter({
     },
     {
       path: "/pages/tip-pages/tip",
-      name: "profile",
+      name: "tip",
       component: TipPage,
     },
   ],
