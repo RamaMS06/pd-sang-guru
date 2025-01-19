@@ -27,14 +27,14 @@ import NavbarDefault from "../..//examples/navbars/NavbarDefault.vue";
         >Kandang & Pakan</span
       >
       <span
-        class="text-title mt-2 mx-10"
+        class="pakan-desc text-title mt-2"
         style="font-weight: 500; font-size: 14px"
       >
         Kami bangga mempersembahkan hewan qurban berkualitas tinggi yang
-        dibesarkan dalam lingkungan yang bersih dan terawat. Di peternakan kami,
-        kebersihan adalah prioritas utama!
+        dibesarkan dalam lingkungan yang bersih dan terawat.<br />
+        Di peternakan kami, kebersihan adalah prioritas utama!
       </span>
-      <img 
+      <img
         class="image-tip mt-4"
         src="https://static.republika.co.id/uploads/images/inpicture_slide/pekerja-memberi-pakan-sapi-di-tempat-penggemukan-sapi-di_220620162111-908.jpg"
         loading="eager"
@@ -51,17 +51,19 @@ import NavbarDefault from "../..//examples/navbars/NavbarDefault.vue";
       </div>
       <div class="kandang-wrapper mt-4">
         <div>
-          <span class="text-info" style="font-weight: 600">Kandang 1</span>
+          <span class="text-info" style="font-weight: 600">Kandang Sapi</span>
           <img
-          v-motion-fade-visible-once
+            v-motion-fade-visible-once
             class="img-kandang mt-3"
             src="/kandang1.jpeg"
           />
         </div>
         <div>
-          <span class="text-info" style="font-weight: 600">Kandang 2</span>
+          <span class="text-info" style="font-weight: 600"
+            >Kandang Kambing</span
+          >
           <img
-          v-motion-fade-visible-once
+            v-motion-fade-visible-once
             class="img-kandang mt-3"
             src="/kandang2.jpeg"
           />
@@ -88,7 +90,7 @@ import NavbarDefault from "../..//examples/navbars/NavbarDefault.vue";
             >
           </div>
           <img
-          v-motion-fade-visible-once
+            v-motion-fade-visible-once
             class="img-pakan mt-3"
             src="https://image-asset.parto.id/i/jX/f48fbeb6e340321bc326a994eaa8a6b6.jpg"
           />
@@ -104,7 +106,7 @@ import NavbarDefault from "../..//examples/navbars/NavbarDefault.vue";
           </div>
 
           <img
-          v-motion-fade-visible-once
+            v-motion-fade-visible-once
             class="img-pakan mt-3"
             src="https://ekafarma.com/wp-content/uploads/2023/07/pakan-jerami.png"
           />
@@ -126,12 +128,16 @@ import NavbarDefault from "../..//examples/navbars/NavbarDefault.vue";
   gap: 16px;
 }
 
+.pakan-desc {
+}
+
 .img-kandang {
   width: 100%;
   height: 100%;
   border-radius: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border: 2px solid #ddd;
+  object-fit: cover;
 }
 
 .img-pakan {

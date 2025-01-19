@@ -143,40 +143,6 @@
   }
 }
 
-.testimoni {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  &__item {
-    background-color: #2c3e50;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-
-    &__header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-
-      &--avatar {
-        border-radius: 100px;
-        height: 35px;
-        width: 35px;
-        text-align: center;
-        color: white;
-        background-color: green;
-        align-content: center;
-        font-weight: 600;
-      }
-    }
-  }
-}
-
 .img-maps {
   width: 80%;
   height: 80%;
