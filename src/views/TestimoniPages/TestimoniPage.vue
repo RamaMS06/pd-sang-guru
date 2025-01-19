@@ -105,7 +105,7 @@ const testimoniesGoogle = [
     </div>
 
     <div
-    v-motion-slide-left
+      v-motion-slide-left
       style="
         margin-top: 5rem;
         display: block;
@@ -182,7 +182,7 @@ const testimoniesGoogle = [
       class="mt-5 mb-3 text-title"
       style="display: flex; flex-direction: column"
     >
-      <span class="text-success title-pakan">#Testimoni Pelanggan</span>
+      <span class="text-success title-pakan">#Ulasan Google</span>
       <span class="text-dark" style="font-size: 14px">
         Testimoni pengunjung dan pelanggan PD. Sang Guru
         <a
