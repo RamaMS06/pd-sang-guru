@@ -32,10 +32,10 @@ import DefaultCounterCard from "../../examples/cards/counterCards/DefaultCounter
       </div>
     </div>
 
-    <div class="grid-profile text-title">
+    <div class="grid-profile text-title text-dark">
       <div class="grid-profile__item">
         <span class="grid-profile__item--title text-dark">#Visi </span>
-        <span class="grid-profile__item--desc mt-1">
+        <span class="grid-profile__item--desc mt-1" style="font-size: 15px">
           "Menjadi penjual hewan qurban terpercaya dan unggul dalam kualitas,
           pelayanan, dan kejujuran, sehingga membantu masyarakat menjalankan
           ibadah qurban dengan mudah dan bermakna."
@@ -45,33 +45,52 @@ import DefaultCounterCard from "../../examples/cards/counterCards/DefaultCounter
       <div class="grid-profile__item">
         <span class="grid-profile__item--title text-dark">#Misi </span>
         <span class="grid-profile__item--desc mt-1">
-          <span
-            >1. Menyediakan hewan qurban yang sehat, berkualitas, dan sesuai
-            syariat Islam</span
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+              font-size: 15px;
+            "
           >
-          <span
-            >2. Memberikan pelayanan ramah, profesional, dan transparan</span
-          >
-          <span>
-            3. Membangun kepercayaan pelanggan melalui komunikasi yang efektif
-          </span>
-          <span>
-            4. Mengembangkan kerjasama dengan peternak lokal untuk meningkatkan
-            kualitas hewan
-          </span>
-          <span>
-            5. Meningkatkan kesadaran masyarakat tentang pentingnya qurban
-          </span>
+            <span
+              v-for="(data, index) in [
+                'Menyediakan hewan qurban yang sehat, berkualitas, dan sesuai syariat Islam',
+                'Memberikan pelayanan ramah, profesional, dan transparan',
+                'Membangun kepercayaan pelanggan melalui komunikasi yang efektif',
+                'Mengembangkan kerjasama dengan peternak lokal untuk meningkatkan kualitas hewan',
+                'Meningkatkan kesadaran masyarakat tentang pentingnya qurban',
+              ]"
+              :key="index"
+            >
+              <span class="text-success" style="font-weight: 700">
+                {{ index + 1 }}.
+              </span>
+              {{ data }}
+            </span>
+          </div>
         </span>
       </div>
 
       <div class="grid-profile__item">
         <span class="grid-profile__item--title text-dark">#Nilai-Nilai </span>
         <span class="grid-profile__item--desc mt-1">
-          <span>1. Integritas dan kejujuran </span>
-          <span>2. Kualitas dan profesionalisme </span>
-          <span>3. Kepercayaan dan transparansi</span>
-          <span>4. Kepedulian sosial dan kebersamaan</span>
+          <div style="display: flex; flex-direction: column">
+            <span
+              v-for="(data, index) in [
+                'Integritas dan kejujuran',
+                'Kualitas dan profesionalisme',
+                'Kepercayaan dan transparansi',
+                'Kepedulian sosial dan kebersamaan',
+              ]"
+              :key="index"
+            >
+              <span class="text-success" style="font-weight: 700">
+                {{ index + 1 }}.
+              </span>
+              {{ data }}
+            </span>
+          </div>
         </span>
       </div>
 
