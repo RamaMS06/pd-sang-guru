@@ -105,6 +105,7 @@ const testimoniesGoogle = [
     </div>
 
     <div
+    v-motion-slide-left
       style="
         margin-top: 5rem;
         display: block;
@@ -121,7 +122,7 @@ const testimoniesGoogle = [
         sehat hingga pelayanan yang ramah dan profesional.
       </span>
 
-      <div class="testimoni--pelanggan__wrapper">
+      <div v-motion-slide-top class="testimoni--pelanggan__wrapper">
         <div
           class="testimoni--pelanggan__wrapper--item"
           v-for="(item, index) in testimonies"
