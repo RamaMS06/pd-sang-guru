@@ -4,6 +4,7 @@ import CheckoutPage from "../views/CheckoutPages/CheckoutPage.vue";
 import ProfilePage from "../views/ProfilePages/ProfilePage.vue";
 import TipPage from "../views/TipPages/TipPage.vue";
 import TestimoniPage from "../views/TestimoniPages/TestimoniPage.vue";
+import PakanPage from "../views/PakanPages/PakanPage.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: "/pages/testimoni-pages/testimoni",
       name: "testimoni",
       component: TestimoniPage,
+    },
+    {
+      path: "/pages/pakan-pages/pakan",
+      name: "pakan",
+      component: PakanPage,
     },
   ],
 });

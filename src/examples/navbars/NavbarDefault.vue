@@ -37,9 +37,7 @@ const props = defineProps({
     default: false,
   },
 });
-
 let showModalContact = ref(false);
-
 // set nav color on mobile && desktop
 
 let textDark = ref(props.darkText);
@@ -50,6 +48,14 @@ if (type.value === "mobile") {
 } else if (type.value === "desktop" && textDark.value == false) {
   textDark.value = false;
 }
+
+const navWrapper = () => {
+  if (type.value === "mobile") {
+    return "nav-wrapper-mobile";
+  } else {
+    return "nav-wrapper-web";
+  }
+};
 
 watch(
   () => type.value,
@@ -151,7 +157,7 @@ watch(
               src="https://cdn-icons-png.flaticon.com/512/2938/2938232.png"
             />
           </RouterLink>
-          <div style="display: flex; gap: 16px">
+          <div :class="navWrapper()">
             <div class="service-navbar" v-on:click="showModalContact = true">
               <div class="material-icons opacity-6 me-2 text-md">
                 support_agent
@@ -167,14 +173,11 @@ watch(
               </div>
               <span class="nav-text"> Keranjang </span>
             </RouterLink>
-            <RouterLink
-              class="checkout-navbar"
-              to="/pages/profile-pages/profile"
-            >
+            <RouterLink class="checkout-navbar" to="/pages/pakan-pages/pakan">
               <div class="nav-icon material-icons opacity-6 me-2 text-md">
-                account_circle
+                restaurant
               </div>
-              <span class="nav-text"> Profil </span>
+              <span class="nav-text"> Kandang & Pakan </span>
             </RouterLink>
             <RouterLink class="checkout-navbar" to="/pages/tip-pages/tip">
               <div class="nav-icon material-icons opacity-6 me-2 text-md">
@@ -191,6 +194,15 @@ watch(
               </div>
               <span class="nav-text"> Testimoni </span>
             </RouterLink>
+            <RouterLink
+              class="checkout-navbar"
+              to="/pages/profile-pages/profile"
+            >
+              <div class="nav-icon material-icons opacity-6 me-2 text-md">
+                account_circle
+              </div>
+              <span class="nav-text"> Profil </span>
+            </RouterLink>
           </div>
         </ul>
       </div>
@@ -202,6 +214,18 @@ watch(
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.nav-wrapper-mobile {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+}
+
+.nav-wrapper-web {
+  display: flex;
+  gap: 16px;
+}
 
 .service-navbar {
   cursor: pointer;

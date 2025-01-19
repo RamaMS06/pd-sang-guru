@@ -81,7 +81,7 @@ const testimonies = [
       style="display: flex; flex-direction: column"
     >
       <span style="color: black; font-size: 24px; font-weight: 600">
-        Testimoni & Rating
+        Testimoni & Rating Google Review
       </span>
       <span>
         Testimoni pengunjung dan pelanggan PD. Sang Guru
